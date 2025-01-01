@@ -24,3 +24,37 @@ window.addEventListener("scroll", function () {
     header.classList.remove("scroll");
   }
 });
+new WOW().init();
+
+(function ($) {
+  "use strict";
+  function centerY() {
+    jQuery(".full-height").each(function () {
+      var dh = jQuery(window).innerHeight();
+      jQuery(this).css("min-height", dh);
+    });
+  }
+  function load_owl() {
+    jQuery("#banner-carousel").owlCarousel({
+      center: false,
+      items: 1,
+      rewind: true,
+      margin: 25,
+      nav: true,
+      navText: [
+        "<i class='fa fa-chevron-left'></i>",
+        "<i class='fa fa-chevron-right'></i>",
+      ],
+      dots: false,
+    });
+  }
+
+  jQuery(document).ready(function () {
+    var $doc_height = jQuery(window).innerHeight();
+
+    $(".full-height").css("min-height", $doc_height);
+
+    centerY();
+    load_owl();
+  });
+})(jQuery);

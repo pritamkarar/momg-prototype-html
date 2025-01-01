@@ -24,7 +24,7 @@ header {
   left: 15px;
   color: #a19795;
 }
-input.form-control {
+input.form-control.search {
   display: flex;
   width: 100%;
   border: none;
@@ -39,6 +39,7 @@ input.form-control {
   outline: none;
   transition: all 0.2s ease;
   color: #a19795;
+  margin: 0;
 }
 input.form-control:focus {
   border: 1px solid #8364e24d;
@@ -53,6 +54,11 @@ input.form-control:focus {
 .navbar-nav .nav-link.show {
   color: #ffb329;
   font-weight: 700;
+}
+.nav-link:focus,
+.nav-link:hover,
+.social-icon li a i:hover {
+  color: #ffb329;
 }
 .nav-link {
   color: #fff;

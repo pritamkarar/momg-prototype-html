@@ -10,6 +10,7 @@ html {
 body {
   font-family: "Roboto", serif;
   background-color: #212428;
+  color: #fff;
 }
 a,
 a:hover {
@@ -58,10 +59,29 @@ section {
     max-width: 1600px;
   }
 }
-
+a {
+  color: #ffb329;
+  text-decoration: none;
+}
 #particles-js {
   width: 100%;
   height: 100%;
   position: absolute;
   z-index: 0;
+}
+
+.no-bottom {
+  padding-bottom: 0;
+}
+.mb30 {
+  margin-bottom: 30px;
+}
+.mb20 {
+  margin-bottom: 20px;
+}
+.spacer-double {
+  width: 100%;
+  height: 60px;
+  display: block;
+  clear: both;
 }
