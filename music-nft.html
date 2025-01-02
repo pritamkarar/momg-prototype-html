@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MOMG - NFT Marketplace for Music, Well-being and Healthcare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./assests/styles/global.css" />
+    <link rel="stylesheet" href="./assests/styles/header-footer.css" />
+    <link rel="stylesheet" href="./assests/styles/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <nav class="navbar navbar-expand-xl">
+          <a class="navbar-brand" href="#">
+            <img
+              src="./assests/images/logo.webp"
+              alt="logo"
+              title="logo"
+              class="img-fluid"
+            />
+          </a>
+          <form class="d-flex position-relative me-auto" role="search">
+            <input
+              class="form-control search"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </form>
+          <div class="back-drop d-xl-none"></div>
+          <button class="navbar-toggler" type="button">
+            <span class="navbar-toggler-icon"
+              ><i class="fa-solid fa-bars-staggered"></i
+            ></span>
+          </button>
+          <div class="navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex justify-content-between">
+              <a class="navbar-brand d-xl-none" href="#">
+                <img
+                  src="./assests/images/logo.webp"
+                  alt="logo"
+                  title="logo"
+                  class="img-fluid"
+                />
+              </a>
+              <button
+                type="button"
+                class="close-icon align-self-baseline d-xl-none"
+              >
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Marketplace</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">AI Platform</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Nodes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Live Concerts</a>
+              </li>
+            </ul>
+            <button class="wallet-btn">Connect Wallet</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="subheader">
+        <div class="center-y relative text-center">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 text-center">
+                <h1>Music NFT</h1>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section aria-label="section">
+        <div class="container">
+          <div class="row wow fadeIn">
+            <div class="col-lg-12">
+              <div class="items_filter">
+                <form
+                  action="https://madebydesignesia.com/themes/gigaland/blank.php"
+                  class="row form-dark"
+                  id="form_quick_search"
+                  method="post"
+                  name="form_quick_search"
+                >
+                  <div class="col text-center">
+                    <input
+                      class="form-control"
+                      id="name_1"
+                      name="name_1"
+                      placeholder="search item here..."
+                      type="text"
+                    />
+                    <a href="#" id="btn-submit"
+                      ><i class="fa fa-search bg-color-secondary"></i
+                    ></a>
+                    <div class="clearfix"></div>
+                  </div>
+                </form>
+
+                <div id="item_category" class="dropdown">
+                  <a href="#" class="btn-selector">All categories</a>
+                  <ul>
+                    <li class="active"><span>All categories</span></li>
+                    <li><span>Art</span></li>
+                    <li><span>Music</span></li>
+                    <li><span>Domain Names</span></li>
+                    <li><span>Virtual World</span></li>
+                    <li><span>Trading Cards</span></li>
+                    <li><span>Collectibles</span></li>
+                    <li><span>Sports</span></li>
+                    <li><span>Utility</span></li>
+                  </ul>
+                </div>
+
+                <div id="buy_category" class="dropdown">
+                  <a href="#" class="btn-selector">Buy Now</a>
+                  <ul>
+                    <li class="active"><span>Buy Now</span></li>
+                    <li><span>On Auction</span></li>
+                    <li><span>Has Offers</span></li>
+                  </ul>
+                </div>
+
+                <div id="items_type" class="dropdown">
+                  <a href="#" class="btn-selector">All Items</a>
+                  <ul>
+                    <li class="active"><span>All Items</span></li>
+                    <li><span>Single Items</span></li>
+                    <li><span>Bundles</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- nft item begin -->
+            <div class="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12">
+              <div class="nft__item nft_type_music">
+                <div
+                  class="de_countdown"
+                  data-year="2024"
+                  data-month="12"
+                  data-day="16"
+                  data-hour="8"
+                >
+                  <span class="countdown-row countdown-show3"
+                    ><span class="countdown-section"
+                      ><span class="countdown-amount">0h</span></span
+                    ><span class="countdown-section"
+                      ><span class="countdown-amount">0m</span></span
+                    ><span class="countdown-section"
+                      ><span class="countdown-amount">0s</span></span
+                    ></span
+                  >
+                </div>
+                <div class="author_list_pp">
+                  <a
+                    href="author.html"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Creator: Monica Lucas"
+                  >
+                    <img
+                      class="lazy"
+                      src="./assests/images/author/author-1.jpg"
+                      alt=""
+                    />
+                    <i class="fa fa-check"></i>
+                  </a>
+                </div>
+                <div class="nft__item_wrap">
+                  <div class="nft__item_extra">
+                    <div class="nft__item_buttons">
+                      <button onclick="location.href='item-details.html'">
+                        Buy Now
+                      </button>
+                      <div class="nft__item_share">
+                        <h4>Share</h4>
+                        <a
+                          href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
+                          target="_blank"
+                          ><i class="fa-brands fa-facebook-f"></i
+                        ></a>
+                        <a
+                          href="https://twitter.com/intent/tweet?url=https://madebydesignesia.com/themes"
+                          target="_blank"
+                          ><i class="fa-brands fa-twitter"></i
+                        ></a>
+                        <a
+                          href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site https://madebydesignesia.com/themes"
+                          ><i class="fa-solid fa-envelope"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nft_type_wrap">
+                    <audio
+                      class="track"
+                      src="https://designesia.com/Cig Swaag - Jingle Punks.mp3"
+                      type="audio/mpeg"
+                    ></audio>
+
+                    <div class="player-container">
+                      <div class="play-pause"></div>
+                    </div>
+
+                    <div class="circle-ripple"></div>
+                  </div>
+                  <a href="03_grey-item-details-audio.html">
+                    <img
+                      src="./assests/images/kykv3nbr8hzrjznb09x4.jpg"
+                      class="lazy nft__item_preview img-fluid"
+                      alt=""
+                    />
+                  </a>
+                </div>
+                <div class="nft__item_info">
+                  <a href="03_grey-item-details.html">
+                    <h4>Cig Swaag</h4>
+                  </a>
+                  <div class="nft__item_click">
+                    <span></span>
+                  </div>
+                  <div class="nft__item_price">0.08 ETH<span>1/20</span></div>
+                  <div class="nft__item_action">
+                    <a href="#">Place a bid</a>
+                  </div>
+                  <div class="nft__item_like">
+                    <i class="fa fa-heart"></i><span>50</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- nft item begin -->
+            <div class="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12">
+              <div class="nft__item nft_type_music">
+                <div class="author_list_pp">
+                  <a
+                    href="author.html"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Creator: Stacy Long"
+                  >
+                    <img
+                      class="lazy"
+                      src="./assests/images/author/author-10.jpg"
+                      alt=""
+                    />
+                    <i class="fa fa-check"></i>
+                  </a>
+                </div>
+                <div class="nft__item_wrap">
+                  <div class="nft__item_extra">
+                    <div class="nft__item_buttons">
+                      <button onclick="location.href='item-details.html'">
+                        Buy Now
+                      </button>
+                      <div class="nft__item_share">
+                        <h4>Share</h4>
+                        <a
+                          href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
+                          target="_blank"
+                          ><i class="fa-brands fa-facebook-f"></i
+                        ></a>
+                        <a
+                          href="https://twitter.com/intent/tweet?url=https://madebydesignesia.com/themes"
+                          target="_blank"
+                          ><i class="fa-brands fa-twitter"></i
+                        ></a>
+                        <a
+                          href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site https://madebydesignesia.com/themes"
+                          ><i class="fa-solid fa-envelope"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nft_type_wrap">
+                    <audio
+                      class="track"
+                      src="https://designesia.com/Cig Swaag - Jingle Punks.mp3"
+                      type="audio/mpeg"
+                    ></audio>
+
+                    <div class="player-container">
+                      <div class="play-pause"></div>
+                    </div>
+
+                    <div class="circle-ripple"></div>
+                  </div>
+                  <a href="03_grey-item-details-audio.html">
+                    <img
+                      src="./assests/images/vlrdjryxnj9j9yo5uqro.jpg"
+                      class="lazy nft__item_preview img-fluid"
+                      alt=""
+                    />
+                  </a>
+                </div>
+                <div class="nft__item_info">
+                  <a href="03_grey-item-details.html">
+                    <h4>Kick Shock</h4>
+                  </a>
+                  <div class="nft__item_click">
+                    <span></span>
+                  </div>
+                  <div class="nft__item_price">0.06 ETH<span>1/22</span></div>
+                  <div class="nft__item_action">
+                    <a href="#">Place a bid</a>
+                  </div>
+                  <div class="nft__item_like">
+                    <i class="fa fa-heart"></i><span>80</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="row pb-3 pt-5 py-sm-5 border-top">
+          <div class="col-lg-3 col-md-6 mb-3">
+            <a href="/" class="mb-3 footer-logo d-flex">
+              <img
+                src="./assests/images/logo.webp"
+                class="img-fluid"
+                alt="footer-logo"
+                title="footer-logo"
+              />
+            </a>
+            <p class="">
+              Beautifully designed components that you can copy and paste into
+              your apps.
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-3">
+            <div class="footer-items">
+              <h5 class="footer-title">Navigation</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0">Home</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0">About</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0">AI Platform</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0">Nodes</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0">Live Concerts</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-3">
+            <div class="footer-items">
+              <h5 class="footer-title">Resources</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0">Documentation</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0">Blog</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0">Support</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0">FAQs</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-3">
+            <div class="footer-items">
+              <h5 class="footer-title">Follow Us</h5>
+              <ul class="nav social-icon">
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0"
+                    ><i class="fa-brands fa-twitter"></i
+                  ></a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0"
+                    ><i class="fa-brands fa-gitlab"></i
+                  ></a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0"
+                    ><i class="fa-brands fa-linkedin-in"></i
+                  ></a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0"
+                    ><i class="fa-brands fa-instagram"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assests/js/plugins.js"></script>
+    <script src="./assests/js/main.js"></script>
+  </body>
+</html>
