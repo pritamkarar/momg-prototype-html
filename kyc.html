@@ -1,332 +1,436 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>KYC Verify</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <link rel="stylesheet" href="./assests/styles/global.css" />
     <link rel="stylesheet" href="./assests/styles/header-footer.css" />
     <link rel="stylesheet" href="./assests/styles/login.css" />
-</head>
-<style>
+  </head>
+  <style>
     .img-thumbs {
-        background: #eee;
-        border: 1px solid #ccc;
-        border-radius: 0.25rem;
-        margin: 1.5rem 0;
-        padding: 0.75rem;
+      background: #212428;
+      border: 1px solid #a1a6c8;
+      border-radius: 0.25rem;
+      margin: 1.5rem 0;
+      padding: 0.75rem;
     }
 
     .img-thumbs-hidden {
-        display: none;
+      display: none;
     }
 
     .wrapper-thumb {
-        position: relative;
-        display: inline-block;
-        margin: 1rem 0;
-        justify-content: space-around;
+      position: relative;
+      display: inline-block;
+      margin: 1rem 0;
+      justify-content: space-around;
     }
 
     .img-preview-thumb {
-        background: #fff;
-        border: 1px solid none;
-        border-radius: 0.25rem;
-        box-shadow: 0.125rem 0.125rem 0.0625rem rgba(0, 0, 0, 0.12);
-        margin-right: 1rem;
-        max-width: 140px;
-        padding: 0.25rem;
+      background: #fff;
+      border: 1px solid none;
+      border-radius: 0.25rem;
+      box-shadow: 0.125rem 0.125rem 0.0625rem rgba(0, 0, 0, 0.12);
+      margin-right: 1rem;
+      max-width: 140px;
+      padding: 0.25rem;
     }
 
     .remove-btn {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: .7rem;
-        top: -5px;
-        right: 10px;
-        width: 20px;
-        height: 20px;
-        background: white;
-        border-radius: 10px;
-        font-weight: bold;
-        cursor: pointer;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.7rem;
+      top: -5px;
+      right: 10px;
+      width: 20px;
+      height: 20px;
+      background: white;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #21273e;
+      font-size: 18px;
     }
 
     .remove-btn:hover {
-        box-shadow: 0px 0px 3px grey;
-        transition: all .3s ease-in-out;
+      box-shadow: 0px 0px 3px grey;
+      transition: all 0.3s ease-in-out;
     }
-</style>
+  </style>
 
-<body>
+  <body>
     <header>
-        <div class="container">
-            <nav class="navbar navbar-expand-xl">
-                <a class="navbar-brand" href="#">
-                    <img src="./assests/images/logo.webp" alt="logo" title="logo" class="img-fluid" />
-                </a>
-                <form class="d-flex position-relative me-auto" role="search">
-                    <input class="form-control search" type="search" placeholder="Search" aria-label="Search" />
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </form>
-                <div class="back-drop d-xl-none"></div>
-                <button class="navbar-toggler" type="button">
-                    <span class="navbar-toggler-icon"><i class="fa-solid fa-bars-staggered"></i></span>
-                </button>
-                <div class="navbar-collapse" id="navbarSupportedContent">
-                    <div class="d-flex justify-content-between">
-                        <a class="navbar-brand d-xl-none" href="#">
-                            <img src="./assests/images/logo.webp" alt="logo" title="logo" class="img-fluid" />
-                        </a>
-                        <button type="button" class="close-icon align-self-baseline d-xl-none">
-                            <i class="fa-solid fa-xmark"></i>
-                        </button>
-                    </div>
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Marketplace</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">AI Platform</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Nodes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Live Concerts</a>
-                        </li>
-                    </ul>
-                    <button class="wallet-btn">Connect Wallet</button>
-                </div>
-            </nav>
-        </div>
+      <div class="container">
+        <nav class="navbar navbar-expand-xl">
+          <a class="navbar-brand" href="#">
+            <img
+              src="./assests/images/logo.webp"
+              alt="logo"
+              title="logo"
+              class="img-fluid"
+            />
+          </a>
+          <form class="d-flex position-relative me-auto" role="search">
+            <input
+              class="form-control search"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </form>
+          <div class="back-drop d-xl-none"></div>
+          <button class="navbar-toggler" type="button">
+            <span class="navbar-toggler-icon"
+              ><i class="fa-solid fa-bars-staggered"></i
+            ></span>
+          </button>
+          <div class="navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex justify-content-between">
+              <a class="navbar-brand d-xl-none" href="#">
+                <img
+                  src="./assests/images/logo.webp"
+                  alt="logo"
+                  title="logo"
+                  class="img-fluid"
+                />
+              </a>
+              <button
+                type="button"
+                class="close-icon align-self-baseline d-xl-none"
+              >
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Marketplace</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">AI Platform</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Nodes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Live Concerts</a>
+              </li>
+            </ul>
+            <button class="wallet-btn">Connect Wallet</button>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <main>
-        <!-- Section Begin -->
-        <section id="subheader" class="text-light" data-bgimage="url(images/background/subheader-dark.jpg) top">
-            <div class="center-y relative text-center">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 text-center">
-                            <h1>Document Verification</h1>
-                            <p class="text-white">Verify your documents via Digilocker or upload them manually.</p>
-                        </div>
-                    </div>
-                </div>
+      <!-- Section Begin -->
+      <section id="subheader" class="text-light">
+        <div class="center-y relative text-center">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 text-center">
+                <h1>Document Verification</h1>
+                <p class="text-white">
+                  Verify your documents via Digilocker or upload them manually.
+                </p>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- Verification Options Section -->
-        <section class="p-0">
-            <div class="container">
-                <div class="text-center">
-                    <div class="col-md-6 mb-4">
-                        <!-- Digilocker Verification -->
-                        <div class="box-rounded padding40" data-bgcolor="#21273e">
-                            <div class="card-body text-center">
-                                <h3 class="card-title"
-                                    style="font-size: 1.8rem; font-weight: 600; margin-bottom: 15px;">Verify via
-                                    Digilocker</h3>
-                                <p class="card-text" style="font-size: 1rem; margin-bottom: 20px;">
-                                    Connect with Digilocker to securely fetch and verify your documents.
-                                </p>
-                                <a href="/connect-digilocker" class="btn btn-main"
-                                    style="padding: 10px 20px; font-size: 1.1rem; text-transform: uppercase; transition: all 0.3s ease;">
-                                    Connect to Digilocker
-                                </a>
-                                <p onclick="showManualUpload()"
-                                    style="cursor: pointer; font-size: 0.9rem; margin-top: 15px; color: #a1a6c8; text-decoration: underline; transition: color 0.3s ease;"
-                                    onmouseover="this.style.color='#fff';" onmouseout="this.style.color='#a1a6c8';">
-                                    Having trouble with Digilocker?
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-4" id="manual-upload-section" style="display: none;">
-                        <!-- Manual Upload -->
-                        <div class="box-rounded padding40" data-bgcolor="#21273e">
-                            <div class="card-body">
-                                <h3 class="card-title">Upload Manually</h3>
-                                <p class="card-text">
-                                    If you prefer, you can upload your documents manually for verification.
-                                </p>
-                                <form action="" method="post" enctype="multipart/form-data" id="form-upload">
-                                    <div class="form-group mt-5">
-                                        <label for="">Choose Documents</label>
-                                        <input type="file" class="form-control" name="images[]" multiple
-                                            id="upload-img" />
-                                    </div>
-                                    <div class="img-thumbs img-thumbs-hidden" id="img-preview"></div>
-                                    <button type="submit" class="btn btn-main"
-                                        style="padding: 10px 20px; font-size: 1.1rem; text-transform: uppercase; transition: all 0.3s ease;">Upload
-                                        Documents</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+      <!-- Verification Options Section -->
+      <section class="pt-0">
+        <div class="container">
+          <div class="text-center">
+            <div class="col-md-6 mb-4">
+              <!-- Digilocker Verification -->
+              <div class="box-rounded padding40" data-bgcolor="#21273e">
+                <div class="card-body text-center">
+                  <h3
+                    class="card-title"
+                    style="
+                      font-size: 1.8rem;
+                      font-weight: 600;
+                      margin-bottom: 15px;
+                    "
+                  >
+                    Verify via Digilocker
+                  </h3>
+                  <p
+                    class="card-text"
+                    style="font-size: 1rem; margin-bottom: 20px"
+                  >
+                    Connect with Digilocker to securely fetch and verify your
+                    documents.
+                  </p>
+                  <a
+                    href="/connect-digilocker"
+                    class="btn-main"
+                    style="
+                      padding: 10px 20px;
+                      font-size: 1.1rem;
+                      text-transform: uppercase;
+                      transition: all 0.3s ease;
+                    "
+                  >
+                    Connect to Digilocker
+                  </a>
+                  <p
+                    onclick="showManualUpload()"
+                    style="
+                      cursor: pointer;
+                      font-size: 0.9rem;
+                      margin-top: 15px;
+                      color: #a1a6c8;
+                      text-decoration: underline;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#fff';"
+                    onmouseout="this.style.color='#a1a6c8';"
+                  >
+                    Having trouble with Digilocker?
+                  </p>
                 </div>
+              </div>
             </div>
-        </section>
+            <div
+              class="col-md-6 mb-4"
+              id="manual-upload-section"
+              style="display: none"
+            >
+              <!-- Manual Upload -->
+              <div class="box-rounded padding40" data-bgcolor="#21273e">
+                <div class="card-body">
+                  <h3 class="card-title">Upload Manually</h3>
+                  <p class="card-text">
+                    If you prefer, you can upload your documents manually for
+                    verification.
+                  </p>
+                  <form
+                    action=""
+                    method="post"
+                    enctype="multipart/form-data"
+                    id="form-upload"
+                  >
+                    <div class="form-group mt-5">
+                      <label for="" class="mb-3">Choose Documents</label>
+                      <input
+                        type="file"
+                        class="form-control"
+                        name="images[]"
+                        multiple
+                        id="upload-img"
+                      />
+                    </div>
+                    <div
+                      class="img-thumbs img-thumbs-hidden"
+                      id="img-preview"
+                    ></div>
+                    <button
+                      type="submit"
+                      class="btn-main"
+                      style="
+                        padding: 10px 20px;
+                        font-size: 1.1rem;
+                        text-transform: uppercase;
+                        transition: all 0.3s ease;
+                      "
+                    >
+                      Upload Documents
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <div class="container">
-            <div class="row pb-3 pt-5 py-sm-5 border-top">
-                <div class="col-lg-3 col-md-6 mb-3">
-                    <a href="/" class="mb-3 footer-logo d-flex">
-                        <img src="./assests/images/logo.webp" class="img-fluid" alt="footer-logo" title="footer-logo" />
-                    </a>
-                    <p class="">
-                        Beautifully designed components that you can copy and paste into
-                        your apps.
-                    </p>
-                </div>
+      <div class="container">
+        <div class="row pb-3 pt-5 py-sm-5 border-top">
+          <div class="col-lg-3 col-md-6 mb-3">
+            <a href="/" class="mb-3 footer-logo d-flex">
+              <img
+                src="./assests/images/logo.webp"
+                class="img-fluid"
+                alt="footer-logo"
+                title="footer-logo"
+              />
+            </a>
+            <p class="">
+              Beautifully designed components that you can copy and paste into
+              your apps.
+            </p>
+          </div>
 
-                <div class="col-lg-3 col-md-6 mb-3">
-                    <div class="footer-items">
-                        <h5 class="footer-title">Navigation</h5>
-                        <ul class="nav flex-column">
-                            <li class="nav-item mb-2">
-                                <a href="#" class="nav-link p-0">Home</a>
-                            </li>
-                            <li class="nav-item mb-2">
-                                <a href="#" class="nav-link p-0">About</a>
-                            </li>
-                            <li class="nav-item mb-2">
-                                <a href="#" class="nav-link p-0">AI Platform</a>
-                            </li>
-                            <li class="nav-item mb-2">
-                                <a href="#" class="nav-link p-0">Nodes</a>
-                            </li>
-                            <li class="nav-item mb-2">
-                                <a href="#" class="nav-link p-0">Live Concerts</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mb-3">
-                    <div class="footer-items">
-                        <h5 class="footer-title">Resources</h5>
-                        <ul class="nav flex-column">
-                            <li class="nav-item mb-2">
-                                <a href="#" class="nav-link p-0">Documentation</a>
-                            </li>
-                            <li class="nav-item mb-2">
-                                <a href="#" class="nav-link p-0">Blog</a>
-                            </li>
-                            <li class="nav-item mb-2">
-                                <a href="#" class="nav-link p-0">Support</a>
-                            </li>
-                            <li class="nav-item mb-2">
-                                <a href="#" class="nav-link p-0">FAQs</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mb-3">
-                    <div class="footer-items">
-                        <h5 class="footer-title">Follow Us</h5>
-                        <ul class="nav social-icon">
-                            <li class="nav-item mb-2">
-                                <a href="#" class="nav-link p-0"><i class="fa-brands fa-twitter"></i></a>
-                            </li>
-                            <li class="nav-item mb-2">
-                                <a href="#" class="nav-link p-0"><i class="fa-brands fa-gitlab"></i></a>
-                            </li>
-                            <li class="nav-item mb-2">
-                                <a href="#" class="nav-link p-0"><i class="fa-brands fa-linkedin-in"></i></a>
-                            </li>
-                            <li class="nav-item mb-2">
-                                <a href="#" class="nav-link p-0"><i class="fa-brands fa-instagram"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+          <div class="col-lg-3 col-md-6 mb-3">
+            <div class="footer-items">
+              <h5 class="footer-title">Navigation</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0">Home</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0">About</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0">AI Platform</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0">Nodes</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0">Live Concerts</a>
+                </li>
+              </ul>
             </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-3">
+            <div class="footer-items">
+              <h5 class="footer-title">Resources</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0">Documentation</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0">Blog</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0">Support</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0">FAQs</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-3">
+            <div class="footer-items">
+              <h5 class="footer-title">Follow Us</h5>
+              <ul class="nav social-icon">
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0"
+                    ><i class="fa-brands fa-twitter"></i
+                  ></a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0"
+                    ><i class="fa-brands fa-gitlab"></i
+                  ></a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0"
+                    ><i class="fa-brands fa-linkedin-in"></i
+                  ></a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0"
+                    ><i class="fa-brands fa-instagram"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
     <script src="./assests/js/plugins.js"></script>
     <script src="./assests/js/main.js"></script>
     <script>
-        function showManualUpload() {
-            const manualUploadSection = document.getElementById('manual-upload-section');
-            manualUploadSection.style.display = 'block';
-            window.scrollTo({
-                top: manualUploadSection.offsetTop,
-                behavior: 'smooth'
-            });
+      function showManualUpload() {
+        const manualUploadSection = document.getElementById(
+          "manual-upload-section"
+        );
+        manualUploadSection.style.display = "block";
+        window.scrollTo({
+          top: manualUploadSection.offsetTop,
+          behavior: "smooth",
+        });
+      }
+
+      var imgUpload = document.getElementById("upload-img"),
+        imgPreview = document.getElementById("img-preview"),
+        imgUploadForm = document.getElementById("form-upload"),
+        totalFiles,
+        previewTitle,
+        previewTitleText,
+        img;
+
+      imgUpload.addEventListener("change", previewImgs, true);
+
+      function previewImgs(event) {
+        totalFiles = imgUpload.files.length;
+
+        if (!!totalFiles) {
+          imgPreview.classList.remove("img-thumbs-hidden");
         }
 
-        var imgUpload = document.getElementById('upload-img')
-            , imgPreview = document.getElementById('img-preview')
-            , imgUploadForm = document.getElementById('form-upload')
-            , totalFiles
-            , previewTitle
-            , previewTitleText
-            , img;
+        for (var i = 0; i < totalFiles; i++) {
+          wrapper = document.createElement("div");
+          wrapper.classList.add("wrapper-thumb");
+          removeBtn = document.createElement("span");
+          nodeRemove = document.createTextNode("x");
+          removeBtn.classList.add("remove-btn");
+          removeBtn.appendChild(nodeRemove);
+          img = document.createElement("img");
+          img.src = URL.createObjectURL(event.target.files[i]);
+          img.classList.add("img-preview-thumb");
+          wrapper.appendChild(img);
+          wrapper.appendChild(removeBtn);
+          imgPreview.appendChild(wrapper);
 
-        imgUpload.addEventListener('change', previewImgs, true);
-
-        function previewImgs(event) {
-            totalFiles = imgUpload.files.length;
-
-            if (!!totalFiles) {
-                imgPreview.classList.remove('img-thumbs-hidden');
-            }
-
-            for (var i = 0; i < totalFiles; i++) {
-                wrapper = document.createElement('div');
-                wrapper.classList.add('wrapper-thumb');
-                removeBtn = document.createElement("span");
-                nodeRemove = document.createTextNode('x');
-                removeBtn.classList.add('remove-btn');
-                removeBtn.appendChild(nodeRemove);
-                img = document.createElement('img');
-                img.src = URL.createObjectURL(event.target.files[i]);
-                img.classList.add('img-preview-thumb');
-                wrapper.appendChild(img);
-                wrapper.appendChild(removeBtn);
-                imgPreview.appendChild(wrapper);
-
-                $('.remove-btn').click(function () {
-                    $(this).parent('.wrapper-thumb').remove();
-                });
-
-            }
-
-
+          $(".remove-btn").click(function () {
+            $(this).parent(".wrapper-thumb").remove();
+          });
         }
+      }
     </script>
-</body>
-
+  </body>
 </html>

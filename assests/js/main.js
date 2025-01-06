@@ -28,6 +28,7 @@ new WOW().init();
 
 (function ($) {
   "use strict";
+
   function centerY() {
     jQuery(".full-height").each(function () {
       var dh = jQuery(window).innerHeight();
@@ -72,6 +73,7 @@ new WOW().init();
       btn.text(txt);
     });
   }
+
   jQuery(document).ready(function () {
     var $doc_height = jQuery(window).innerHeight();
 
@@ -103,10 +105,72 @@ new WOW().init();
       cover.css("opacity", "0");
       jQuery(this).find(".nft__item_click").data("iteration", 1);
     });
+
     centerY();
     load_owl();
+
     dropdown("#item_category");
     dropdown("#buy_category");
     dropdown("#items_type");
   });
 })(jQuery);
+
+(function ($) {
+  "use strict";
+
+  var imJs = {
+    m: function (e) {
+      imJs.d();
+      imJs.methods();
+    },
+    d: function (e) {
+      (this._window = $(window)),
+        (this._document = $(document)),
+        (this._body = $("body")),
+        (this._html = $("html"));
+    },
+    methods: function (e) {
+      imJs.stickyAdjust();
+      imJs.rncounterUp();
+    },
+
+    stickyAdjust: function (e) {
+      // Sticky Top Adjust..,
+      $(".rbt-sticky-top-adjust").css({
+        top: 100,
+      });
+
+      $(".rbt-sticky-top-adjust-two").css({
+        top: 200,
+      });
+      $(".rbt-sticky-top-adjust-three").css({
+        top: 25,
+      });
+      $(".rbt-sticky-top-adjust-four").css({
+        top: 90,
+      });
+      $(".rbt-sticky-top-adjust-five").css({
+        top: 100,
+      });
+    },
+
+    rncounterUp: function () {
+      var odo = $(".odometer");
+
+      // Check if the appear plugin is loaded
+      if (!$.fn.appear) {
+        console.error("jQuery Appear plugin is not loaded.");
+        return;
+      }
+
+      odo.each(function () {
+        $(this).appear(function () {
+          var countNumber = $(this).attr("data-count");
+          $(this).html(countNumber);
+        });
+      });
+    },
+  };
+
+  imJs.m();
+})(jQuery, window);
