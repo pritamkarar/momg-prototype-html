@@ -1,339 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Register</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
 
-    <link rel="stylesheet" href="./assests/styles/global.css" />
-    <link rel="stylesheet" href="./assests/styles/header-footer.css" />
-    <link rel="stylesheet" href="./assests/styles/login.css" />
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Register</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <body>
-    <header>
-      <div class="container">
-        <nav class="navbar navbar-expand-xl">
-          <a class="navbar-brand" href="#">
-            <img
-              src="./assests/images/logo.webp"
-              alt="logo"
-              title="logo"
-              class="img-fluid"
-            />
-          </a>
-          <form class="d-flex position-relative me-auto" role="search">
-            <input
-              class="form-control search"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </form>
-          <div class="back-drop d-xl-none"></div>
-          <button class="navbar-toggler" type="button">
-            <span class="navbar-toggler-icon"
-              ><i class="fa-solid fa-bars-staggered"></i
-            ></span>
-          </button>
-          <div class="navbar-collapse" id="navbarSupportedContent">
-            <div class="d-flex justify-content-between">
-              <a class="navbar-brand d-xl-none" href="#">
-                <img
-                  src="./assests/images/logo.webp"
-                  alt="logo"
-                  title="logo"
-                  class="img-fluid"
-                />
-              </a>
-              <button
-                type="button"
-                class="close-icon align-self-baseline d-xl-none"
-              >
-                <i class="fa-solid fa-xmark"></i>
-              </button>
-            </div>
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Marketplace</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">AI Platform</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Nodes</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Live Concerts</a>
-              </li>
-            </ul>
-            <button class="wallet-btn">Connect Wallet</button>
+  <link rel="stylesheet" href="./assests/styles/global.css" />
+  <link rel="stylesheet" href="./assests/styles/header-footer.css" />
+  <link rel="stylesheet" href="./assests/styles/login.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav class="navbar navbar-expand-xl">
+        <a class="navbar-brand" href="#">
+          <img src="./assests/images/logo.webp" alt="logo" title="logo" class="img-fluid" />
+        </a>
+        <form class="d-flex position-relative me-auto" role="search">
+          <input class="form-control search" type="search" placeholder="Search" aria-label="Search" />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </form>
+        <div class="back-drop d-xl-none"></div>
+        <button class="navbar-toggler" type="button">
+          <span class="navbar-toggler-icon"><i class="fa-solid fa-bars-staggered"></i></span>
+        </button>
+        <div class="navbar-collapse" id="navbarSupportedContent">
+          <div class="d-flex justify-content-between">
+            <a class="navbar-brand d-xl-none" href="#">
+              <img src="./assests/images/logo.webp" alt="logo" title="logo" class="img-fluid" />
+            </a>
+            <button type="button" class="close-icon align-self-baseline d-xl-none">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
           </div>
-        </nav>
-      </div>
-    </header>
-
-    <main>
-      <!-- section begin -->
-      <section
-        id="subheader"
-        class="text-light"
-        data-bgimage="url(images/background/subheader-dark.jpg) top"
-      >
-        <div class="center-y relative text-center">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12 text-center">
-                <h1>Register</h1>
-                <p class="text-white">Anim pariatur cliche reprehenderit</p>
-              </div>
-            </div>
-          </div>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Marketplace</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">AI Platform</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Nodes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Live Concerts</a>
+            </li>
+          </ul>
+          <button class="wallet-btn">Connect Wallet</button>
         </div>
-      </section>
+      </nav>
+    </div>
+  </header>
 
-      <section aria-label="section">
+  <main>
+    <!-- section begin -->
+    <section id="subheader" class="text-light" data-bgimage="url(images/background/subheader-dark.jpg) top">
+      <div class="center-y relative text-center">
         <div class="container">
           <div class="row">
-            <div class="col-md-8 offset-md-2">
-              <h3>Don't have an account? Register now.</h3>
-              <p>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis et quasi architecto beatae
-                vitae dicta sunt explicabo.
-              </p>
-
-              <div class="spacer-10"></div>
-
-              <form
-                name="contactForm"
-                id="contact_form"
-                class="form-border"
-                method="post"
-                action="https://madebydesignesia.com/themes/gigaland/blank.php"
-              >
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="field-set">
-                      <label>Name:</label>
-                      <input
-                        type="text"
-                        name="name"
-                        id="name"
-                        class="form-control"
-                      />
-                    </div>
-                  </div>
-
-                  <div class="col-md-6">
-                    <div class="field-set">
-                      <label>Email Address:</label>
-                      <input
-                        type="text"
-                        name="email"
-                        id="email"
-                        class="form-control"
-                      />
-                    </div>
-                  </div>
-
-                  <div class="col-md-6">
-                    <div class="field-set">
-                      <label>Choose a Username:</label>
-                      <input
-                        type="text"
-                        name="username"
-                        id="username"
-                        class="form-control"
-                      />
-                    </div>
-                  </div>
-
-                  <div class="col-md-6">
-                    <div class="field-set">
-                      <label>Phone:</label>
-                      <input
-                        type="text"
-                        name="phone"
-                        id="phone"
-                        class="form-control"
-                      />
-                    </div>
-                  </div>
-
-                  <div class="col-md-6">
-                    <div class="field-set">
-                      <label>Password:</label>
-                      <input
-                        type="text"
-                        name="password"
-                        id="password"
-                        class="form-control"
-                      />
-                    </div>
-                  </div>
-
-                  <div class="col-md-6">
-                    <div class="field-set">
-                      <label>Re-enter Password:</label>
-                      <input
-                        type="text"
-                        name="re-password"
-                        id="re-password"
-                        class="form-control"
-                      />
-                    </div>
-                  </div>
-
-                  <div class="col-md-12">
-                    <div id="submit" class="pull-left">
-                      <input
-                        type="submit"
-                        id="send_message"
-                        value="Register Now"
-                        class="btn btn-main color-2"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <div class="container">
-        <div class="row pb-3 pt-5 py-sm-5 border-top">
-          <div class="col-lg-3 col-md-6 mb-3">
-            <a href="/" class="mb-3 footer-logo d-flex">
-              <img
-                src="./assests/images/logo.webp"
-                class="img-fluid"
-                alt="footer-logo"
-                title="footer-logo"
-              />
-            </a>
-            <p class="">
-              Beautifully designed components that you can copy and paste into
-              your apps.
-            </p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mb-3">
-            <div class="footer-items">
-              <h5 class="footer-title">Navigation</h5>
-              <ul class="nav flex-column">
-                <li class="nav-item mb-2">
-                  <a href="#" class="nav-link p-0">Home</a>
-                </li>
-                <li class="nav-item mb-2">
-                  <a href="#" class="nav-link p-0">About</a>
-                </li>
-                <li class="nav-item mb-2">
-                  <a href="#" class="nav-link p-0">AI Platform</a>
-                </li>
-                <li class="nav-item mb-2">
-                  <a href="#" class="nav-link p-0">Nodes</a>
-                </li>
-                <li class="nav-item mb-2">
-                  <a href="#" class="nav-link p-0">Live Concerts</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mb-3">
-            <div class="footer-items">
-              <h5 class="footer-title">Resources</h5>
-              <ul class="nav flex-column">
-                <li class="nav-item mb-2">
-                  <a href="#" class="nav-link p-0">Documentation</a>
-                </li>
-                <li class="nav-item mb-2">
-                  <a href="#" class="nav-link p-0">Blog</a>
-                </li>
-                <li class="nav-item mb-2">
-                  <a href="#" class="nav-link p-0">Support</a>
-                </li>
-                <li class="nav-item mb-2">
-                  <a href="#" class="nav-link p-0">FAQs</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mb-3">
-            <div class="footer-items">
-              <h5 class="footer-title">Follow Us</h5>
-              <ul class="nav social-icon">
-                <li class="nav-item mb-2">
-                  <a href="#" class="nav-link p-0"
-                    ><i class="fa-brands fa-twitter"></i
-                  ></a>
-                </li>
-                <li class="nav-item mb-2">
-                  <a href="#" class="nav-link p-0"
-                    ><i class="fa-brands fa-gitlab"></i
-                  ></a>
-                </li>
-                <li class="nav-item mb-2">
-                  <a href="#" class="nav-link p-0"
-                    ><i class="fa-brands fa-linkedin-in"></i
-                  ></a>
-                </li>
-                <li class="nav-item mb-2">
-                  <a href="#" class="nav-link p-0"
-                    ><i class="fa-brands fa-instagram"></i
-                  ></a>
-                </li>
-              </ul>
+            <div class="col-md-12 text-center">
+              <h1>Register</h1>
+              <p class="text-white">Anim pariatur cliche reprehenderit</p>
             </div>
           </div>
         </div>
       </div>
-    </footer>
+    </section>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./assests/js/plugins.js"></script>
-    <script src="./assests/js/main.js"></script>
-  </body>
+    <section aria-label="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <h3>Don't have an account? Register now.</h3>
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae
+              vitae dicta sunt explicabo.
+            </p>
+
+            <div class="spacer-10"></div>
+            <form name="contactForm" id="contact_form" class="form-border" method="post">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="field-set">
+                    <label>Name:</label>
+                    <input type="text" name="name" id="name" class="form-control" />
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="field-set">
+                    <label>Email Address:</label>
+                    <input type="text" name="email" id="email" class="form-control" />
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="field-set">
+                    <label>Choose a Username:</label>
+                    <input type="text" name="username" id="username" class="form-control" />
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="field-set">
+                    <label>Phone:</label>
+                    <input type="text" name="phone" id="phone" class="form-control" />
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="field-set">
+                    <label>Password:</label>
+                    <input type="text" name="password" id="password" class="form-control" />
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="field-set">
+                    <label>Re-enter Password:</label>
+                    <input type="text" name="re-password" id="re-password" class="form-control" />
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div id="submit" class="pull-left">
+                    <input type="button" id="send_message" value="Register Now" class="btn btn-main color-2"
+                      onclick="window.location.href='verify.html'" />
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="row pb-3 pt-5 py-sm-5 border-top">
+        <div class="col-lg-3 col-md-6 mb-3">
+          <a href="/" class="mb-3 footer-logo d-flex">
+            <img src="./assests/images/logo.webp" class="img-fluid" alt="footer-logo" title="footer-logo" />
+          </a>
+          <p class="">
+            Beautifully designed components that you can copy and paste into
+            your apps.
+          </p>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-3">
+          <div class="footer-items">
+            <h5 class="footer-title">Navigation</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">Home</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">About</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">AI Platform</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">Nodes</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">Live Concerts</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-3">
+          <div class="footer-items">
+            <h5 class="footer-title">Resources</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">Documentation</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">Blog</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">Support</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">FAQs</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-3">
+          <div class="footer-items">
+            <h5 class="footer-title">Follow Us</h5>
+            <ul class="nav social-icon">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0"><i class="fa-brands fa-twitter"></i></a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0"><i class="fa-brands fa-gitlab"></i></a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0"><i class="fa-brands fa-linkedin-in"></i></a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0"><i class="fa-brands fa-instagram"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="./assests/js/plugins.js"></script>
+  <script src="./assests/js/main.js"></script>
+</body>
+
 </html>
