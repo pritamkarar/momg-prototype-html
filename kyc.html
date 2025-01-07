@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="./assests/styles/global.css" />
     <link rel="stylesheet" href="./assests/styles/header-footer.css" />
     <link rel="stylesheet" href="./assests/styles/login.css" />
+    <link rel="stylesheet" href="./assests/styles/style.css" />
   </head>
   <style>
     .img-thumbs {
@@ -47,15 +48,15 @@
       margin: 1rem 0;
       justify-content: space-around;
     }
-
     .img-preview-thumb {
       background: #fff;
       border: 1px solid none;
       border-radius: 0.25rem;
       box-shadow: 0.125rem 0.125rem 0.0625rem rgba(0, 0, 0, 0.12);
-      margin-right: 1rem;
-      max-width: 140px;
+      /* margin-right: 1rem; */
+      max-width: 200px;
       padding: 0.25rem;
+      min-width: 200px;
     }
 
     .remove-btn {
@@ -64,12 +65,12 @@
       justify-content: center;
       align-items: center;
       font-size: 0.7rem;
-      top: -5px;
-      right: 10px;
-      width: 20px;
-      height: 20px;
-      background: white;
-      border-radius: 10px;
+      top: -12px;
+      right: -13px;
+      width: 30px;
+      height: 30px;
+      background: #ffb329;
+      border-radius: 50%;
       font-weight: bold;
       cursor: pointer;
       color: #21273e;
@@ -172,107 +173,153 @@
       <!-- Verification Options Section -->
       <section class="pt-0">
         <div class="container">
-          <div class="text-center">
+          <div class="row">
             <div class="col-md-6 mb-4">
               <!-- Digilocker Verification -->
-              <div class="box-rounded padding40" data-bgcolor="#21273e">
+              <div class="box-rounded box-url padding40" data-bgcolor="#21273e">
                 <div class="card-body text-center">
-                  <h3
-                    class="card-title"
-                    style="
-                      font-size: 1.8rem;
-                      font-weight: 600;
-                      margin-bottom: 15px;
-                    "
-                  >
-                    Verify via Digilocker
-                  </h3>
-                  <p
-                    class="card-text"
-                    style="font-size: 1rem; margin-bottom: 20px"
-                  >
+                  <h3 class="card-title">Verify via DigiLocker</h3>
+                  <p class="mt-3">
                     Connect with Digilocker to securely fetch and verify your
                     documents.
                   </p>
-                  <a
-                    href="/connect-digilocker"
-                    class="btn-main"
-                    style="
-                      padding: 10px 20px;
-                      font-size: 1.1rem;
-                      text-transform: uppercase;
-                      transition: all 0.3s ease;
-                    "
-                  >
-                    Connect to Digilocker
+                  <a href="/connect-digilocker" class="btn-main">
+                    Connect to DigiLocker
                   </a>
-                  <p
-                    onclick="showManualUpload()"
-                    style="
-                      cursor: pointer;
-                      font-size: 0.9rem;
-                      margin-top: 15px;
-                      color: #a1a6c8;
-                      text-decoration: underline;
-                      transition: color 0.3s ease;
-                    "
-                    onmouseover="this.style.color='#fff';"
-                    onmouseout="this.style.color='#a1a6c8';"
-                  >
-                    Having trouble with Digilocker?
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-md-6 mb-4"
-              id="manual-upload-section"
-              style="display: none"
-            >
-              <!-- Manual Upload -->
-              <div class="box-rounded padding40" data-bgcolor="#21273e">
-                <div class="card-body">
-                  <h3 class="card-title">Upload Manually</h3>
-                  <p class="card-text">
-                    If you prefer, you can upload your documents manually for
-                    verification.
-                  </p>
-                  <form
-                    action=""
-                    method="post"
-                    enctype="multipart/form-data"
-                    id="form-upload"
-                  >
-                    <div class="form-group mt-5">
-                      <label for="" class="mb-3">Choose Documents</label>
-                      <input
-                        type="file"
-                        class="form-control"
-                        name="images[]"
-                        multiple
-                        id="upload-img"
-                      />
-                    </div>
-                    <div
-                      class="img-thumbs img-thumbs-hidden"
-                      id="img-preview"
-                    ></div>
-                    <button
-                      type="submit"
-                      class="btn-main"
+                  <p class="mt-3">
+                    Having trouble with
+                    <span
+                      id="toggle-digilocker"
                       style="
-                        padding: 10px 20px;
-                        font-size: 1.1rem;
-                        text-transform: uppercase;
-                        transition: all 0.3s ease;
+                        color: #ffb329;
+                        text-decoration: underline;
+                        cursor: pointer;
                       "
                     >
-                      Upload Documents
-                    </button>
-                  </form>
+                      DigiLocker?</span
+                    >
+                  </p>
                 </div>
               </div>
             </div>
+          </div>
+          <div class="manual-upload mt-4" style="display: none">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="wrapper-dropdown" id="dropdown">
+                  <span class="selected-display" id="destination"
+                    >Pick an option</span
+                  >
+                  <svg
+                    class="arrow"
+                    id="drp-arrow"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="transition-all ml-auto rotate-180"
+                  >
+                    <path
+                      d="M7 14.5l5-5 5 5"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                  <ul class="dropdown">
+                    <li class="item">Pan Card</li>
+                    <li class="item">Aadhar Card</li>
+                    <li class="item">Driving License</li>
+                    <li class="item">Passport</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <form
+              action=""
+              method="post"
+              enctype="multipart/form-data"
+              id="form-upload"
+            >
+              <div class="row">
+                <div class="col-md-6 mb-4" id="manual-upload-section">
+                  <!-- Manual Upload -->
+                  <div
+                    class="box-rounded box-url padding40"
+                    data-bgcolor="#21273e"
+                  >
+                    <div class="card-body">
+                      <h3 class="card-title">
+                        Upload front side of your document
+                      </h3>
+                      <p class="card-text">
+                        If you prefer, you can upload your documents manually
+                        for verification.
+                      </p>
+
+                      <div class="form-group mt-3">
+                        <div
+                          class="img-thumbs img-thumbs-hidden"
+                          id="img-preview"
+                        ></div>
+                        <div class="d-flex justify-content-center">
+                          <label for="upload-img" class="btn-main"
+                            >Choose Documents
+                            <input
+                              hidden
+                              type="file"
+                              class="form-control"
+                              name="images"
+                              id="upload-img"
+                            />
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4" id="manual-upload-section">
+                  <!-- Manual Upload -->
+                  <div
+                    class="box-rounded box-url padding40"
+                    data-bgcolor="#21273e"
+                  >
+                    <div class="card-body">
+                      <h3 class="card-title">
+                        Upload back side of your document
+                      </h3>
+                      <p class="card-text">
+                        If you prefer, you can upload your documents manually
+                        for verification.
+                      </p>
+
+                      <div class="form-group mt-3"></div>
+                      <div
+                        class="img-thumbs img-thumbs-hidden"
+                        id="img-preview2"
+                      ></div>
+                      <div class="d-flex justify-content-center">
+                        <label for="upload-img2" class="btn-main"
+                          >Choose Documents
+                          <input
+                            hidden
+                            type="file"
+                            class="form-control"
+                            name="images"
+                            id="upload-img2"
+                          />
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="">
+                <button class="btn-main">Submit</button>
+              </div>
+            </form>
           </div>
         </div>
       </section>
@@ -384,53 +431,60 @@
     <script src="./assests/js/plugins.js"></script>
     <script src="./assests/js/main.js"></script>
     <script>
-      function showManualUpload() {
-        const manualUploadSection = document.getElementById(
-          "manual-upload-section"
+      $("#toggle-digilocker").click(function () {
+        $(".manual-upload").slideDown();
+      });
+      // Reusable single image upload and preview function
+      function setupSingleImageUpload(inputId, previewContainerId) {
+        const imgUpload = document.getElementById(inputId);
+        const imgPreview = document.getElementById(previewContainerId);
+
+        imgUpload.addEventListener(
+          "change",
+          function (event) {
+            previewSingleImage(event, imgPreview);
+          },
+          true
         );
-        manualUploadSection.style.display = "block";
-        window.scrollTo({
-          top: manualUploadSection.offsetTop,
-          behavior: "smooth",
-        });
       }
 
-      var imgUpload = document.getElementById("upload-img"),
-        imgPreview = document.getElementById("img-preview"),
-        imgUploadForm = document.getElementById("form-upload"),
-        totalFiles,
-        previewTitle,
-        previewTitleText,
-        img;
+      function previewSingleImage(event, previewContainer) {
+        const totalFiles = event.target.files.length;
 
-      imgUpload.addEventListener("change", previewImgs, true);
+        // Clear previous preview
+        previewContainer.innerHTML = "";
 
-      function previewImgs(event) {
-        totalFiles = imgUpload.files.length;
-
-        if (!!totalFiles) {
-          imgPreview.classList.remove("img-thumbs-hidden");
-        }
-
-        for (var i = 0; i < totalFiles; i++) {
-          wrapper = document.createElement("div");
+        if (totalFiles > 0) {
+          previewContainer.classList.remove("img-thumbs-hidden");
+          const file = event.target.files[0];
+          const wrapper = document.createElement("div");
           wrapper.classList.add("wrapper-thumb");
-          removeBtn = document.createElement("span");
-          nodeRemove = document.createTextNode("x");
+
+          const removeBtn = document.createElement("span");
           removeBtn.classList.add("remove-btn");
-          removeBtn.appendChild(nodeRemove);
-          img = document.createElement("img");
-          img.src = URL.createObjectURL(event.target.files[i]);
+          removeBtn.textContent = "x";
+
+          const img = document.createElement("img");
+          img.src = URL.createObjectURL(file);
           img.classList.add("img-preview-thumb");
+
+          // Append elements
           wrapper.appendChild(img);
           wrapper.appendChild(removeBtn);
-          imgPreview.appendChild(wrapper);
+          previewContainer.appendChild(wrapper);
 
-          $(".remove-btn").click(function () {
-            $(this).parent(".wrapper-thumb").remove();
+          // Add remove functionality
+          removeBtn.addEventListener("click", function () {
+            previewContainer.innerHTML = "";
+            event.target.value = "";
+            previewContainer.style.display = "none"; // or use .classList.add("img-thumbs-hidden");
           });
         }
       }
+
+      // Example usage
+      setupSingleImageUpload("upload-img", "img-preview");
+      setupSingleImageUpload("upload-img2", "img-preview2");
     </script>
   </body>
 </html>

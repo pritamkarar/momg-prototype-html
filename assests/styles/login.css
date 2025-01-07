@@ -33,14 +33,14 @@ p.lead {
   font-weight: 400;
   margin-bottom: 20px;
 }
-.box-rounded {
+/* .box-rounded {
   border-radius: 3px;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   padding: 40px;
   background-color: rgb(33, 39, 62);
   background-size: cover;
-}
+} */
 .mb10 {
   margin-bottom: 10px;
 }
@@ -76,7 +76,6 @@ textarea.form-control {
 .btn-main:visited,
 .btn-main {
   display: inline-block;
-  line-height: 1.2em;
   text-align: center;
   color: #fff;
   border-radius: 30px;
@@ -89,6 +88,7 @@ textarea.form-control {
   font-size: 14px;
   border: none;
   background: #ffb329;
+  letter-spacing: 1px;
 }
 .spacer-single {
   width: 100%;

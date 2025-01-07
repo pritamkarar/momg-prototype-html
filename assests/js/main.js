@@ -4,6 +4,55 @@ const togglerBtn = document.querySelector(".navbar-toggler");
 const closeIcon = document.querySelector(".close-icon");
 const header = document.querySelector("header");
 
+function initializeDropdown(dropdown) {
+  const optionsContainer = dropdown.querySelector("ul");
+  const optionsList = dropdown.querySelectorAll("li");
+  const arrow = dropdown.querySelector("svg");
+  const display = dropdown.querySelector(".selected-display");
+
+  // Toggle dropdown on click
+  dropdown.addEventListener("click", (e) => {
+    const isActive = dropdown.classList.contains("active");
+
+    // If clicked on an option, do not toggle open/close logic here.
+    if (e.target.tagName === "LI") {
+      return;
+    }
+
+    handleDropdown(dropdown, arrow, !isActive);
+  });
+
+  // Update the selected display and close dropdown on option click
+  optionsList.forEach((option) => {
+    option.addEventListener("click", () => {
+      display.innerHTML = option.innerHTML;
+      handleDropdown(dropdown, arrow, false); // Close dropdown
+    });
+  });
+
+  // Close dropdown when clicking outside
+  window.addEventListener("click", (e) => {
+    if (!dropdown.contains(e.target)) {
+      handleDropdown(dropdown, arrow, false);
+    }
+  });
+}
+
+// Function to handle dropdown state
+function handleDropdown(dropdown, arrow, open) {
+  if (open) {
+    dropdown.classList.add("active");
+    arrow.classList.add("rotated");
+  } else {
+    dropdown.classList.remove("active");
+    arrow.classList.remove("rotated");
+  }
+}
+
+// Initialize dropdown
+const singleDropdown = document.querySelector(".wrapper-dropdown");
+initializeDropdown(singleDropdown);
+
 function closeNavbar() {
   navbar.style.transform = "translateX(300px)";
   backDrop.style.right = "-100%";
