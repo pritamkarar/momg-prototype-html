@@ -1037,3 +1037,35 @@ svg {
   visibility: visible;
   border-radius: 15px;
 }
+.blog-card{
+  display:flex;
+  height: 300px;
+  padding: 0;
+  overflow: hidden;
+}
+.blog-card-image {
+  max-width:300px;
+  max-height: 100%;  
+}
+.blog-card-image img{
+  height:100%;
+  border-radius: 20px 0px 0px 20px;
+}
+.blog-details{
+  padding:15px
+}
+.blog-details .title{
+  font-size:24px;
+  font-weight:700;
+  margin-bottom:15px;
+}
+.blog-details .des{
+  font-size:16px;
+  margin-bottom:20px;
+}
+.blog-details .author{
+  color:#ffb329
+}
+.date{
+  color:#999;
+}
