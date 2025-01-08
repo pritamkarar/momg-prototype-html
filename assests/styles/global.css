@@ -97,3 +97,47 @@ a:hover {
   display: block;
   clear: both;
 }
+
+.jss68 {
+  margin-top: 70px;
+}
+.jss189 {
+  margin-top: 8px;
+}
+.jss190 {
+  margin-top: 30px;
+}
+.jss196 ,.jss204  {
+  display: flex;
+  align-items: center;
+}
+.jss198 {
+  margin-top: 30px;
+}
+.jss191 {
+  padding: 0px 22px;
+  min-width: 990px;
+  border-spacing: 0px 4px;
+  border-collapse: separate;
+}
+.jss191 {
+  padding: 0px 22px;
+  min-width: 990px;
+  border-spacing: 0px 4px;
+  border-collapse: separate;
+}
+.MuiTable-root {
+  width: 100%;
+  display: table;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.MuiTableHead-root {
+  display: table-header-group;
+}
+.MuiTableRow-root {
+  color: #fff;
+  display: table-row;
+  outline: 0;
+  vertical-align: middle;
+}

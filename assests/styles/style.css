@@ -949,7 +949,7 @@ button.btn.btn-primary {
   position: relative;
   display: inline-block;
   min-width: 231.5px;
-  width: 100%; !important;
+  width: 100%!important;
   max-width: 100%;
   padding: 15px;
   border-radius: 15px;
@@ -1100,7 +1100,6 @@ svg {
 .location{
   margin:10px 0;
   color:#999; 
-  font
 }
 
 .d-date{
@@ -1223,4 +1222,403 @@ text-align:center;
 .item_info_counts>div i {
   margin-right: 5px;   
    color: #ffffffb3;
+}
+.mr40 {
+  margin-right: 40px;
+}
+.item_info h6 {
+  margin-bottom: 15px;
+  font-size: 14px;
+  margin-top: 0;
+  font-family: var(--title-font);
+  font-weight: 700;
+}
+.item_author .author_list_pp {
+  margin-left: 0;
+}
+.item_author .author_list_info {
+  padding-top: 0;
+  padding-left: 18px;
+  font-weight: bold;
+  max-width: 135px;
+  min-width: 135px;
+}
+.item_author {
+  display: flex;
+  align-items: center;
+}
+.item_author .author_list_info a {
+  word-break: break-word;
+}
+.view-more{
+  text-decoration: underline;
+  color: #ffb329;
+  cursor: pointer;
+  text-align: start;
+  margin-top: 10px;
+}
+.spacer-40 {
+  width: 100%;
+  height: 40px;
+  display: block;
+  clear: both;
+}
+.de_tab .de_nav {
+  overflow: hidden;
+  padding-left: 0;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+.de_tab .de_nav li {
+  float: left;
+  list-style: none;
+  background: #EEE;
+  margin-right: 10px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  min-width: 80px;
+  text-align: center;
+}
+
+.de_tab.tab_simple .de_nav li.active span {
+  color: #ffffff;
+}
+
+.de_tab .de_nav li span{
+  border: solid 1px rgba(255, 255, 255, .1);
+  background: #212428;
+  display: block;
+  text-decoration: none;
+  color: #646464;
+  font-size: 15px;
+  cursor: poInter;  
+  padding: 8px 15px;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+.de_tab .de_tab_content {
+  padding-top: 30px;
+}
+.p_list {
+  margin-bottom: 30px;
+}
+.p_list_pp {
+  position: absolute;
+  display: inline-block;
+  width: 50px;
+  height: auto;
+  margin-left: 0px;
+  margin-top: -3px;
+  z-index: 10;
+}
+.p_list_pp i {
+  color: #ffffff;
+  font-size: 10px;
+  padding: 3px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-radius: 100%;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  background-color: #ffb329;
+}
+.p_list_info {
+  font-weight: 400;
+  padding-left: 70px;
+  color: #999999;
+}
+.p_list_info h5 {
+  font-size: 16px;
+  margin-bottom: 0;
+  color: #fff;
+  font-weight: 700;
+}
+.p_list_info b {
+  color: #ffffff;
+}
+.p_list_pp img {
+  width: 100%;
+  border-radius: 100% !important;
+  -moz-border-radius: 100% !important;
+  -webkit-border-radius: 100% !important;
+}
+.spacer-10 {
+  width: 100%;
+  height: 10px;
+  display: block;
+  clear: both;
+}
+.nft-item-price {
+  margin-bottom: 30px;
+  color: #999999;
+}
+.nft-item-price img {
+  width: 24px;
+  height: 24px;
+  margin-top: -12px;
+  margin-right: 5px;
+}
+ .nft-item-price span {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 28px;
+  padding-right: 10px;
+}
+ a.btn-main.btn-light {
+  background: rgba(255, 255, 255, .1);
+  color: #ffffff;
+}
+a.btn-lg {
+  font-size: 16px !important;
+  padding: 12px 40px !important;
+}
+.modal-content {
+  background: #212428;
+}
+.de-modal .btn-close {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  z-index: 100;
+}
+ .de-modal .btn-close {
+  background: url(../images/btn-close-light.png) center no-repeat;
+}
+.de-modal h3 {
+  font-size: 22px;
+  margin-bottom: 25px;
+  color: #fff;
+}
+.modal-body{
+  color: #999999;
+}
+ .de-modal b {
+  color: #ffffff;
+}
+.spacer-single {
+  width: 100%;
+  height: 30px;
+  display: block;
+  clear: both;
+}
+span.id-color-2{
+  color: #ffb329;
+}
+
+.de-modal h6{
+margin-bottom: 10px;
+}
+.form-border input[type=text]{
+  padding: 8px;
+  margin-bottom: 20px;
+  border: solid 1px #dddddd;
+  background: none;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  height: auto;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  color: #333;
+  color: #ffffff;
+  border: solid 1px rgba(255, 255, 255, .2);
+}
+.form-border input[type=text]:focus {
+  -webkit-box-shadow: 0px 0px 0px 4px rgba(255, 179, 41, .3);
+  -moz-box-shadow: 0px 0px 0px 4px rgba(255, 179, 41, .3);
+  box-shadow: 0px 0px 0px 4px rgba(255, 179, 41, .3);
+  background: rgba(255, 179, 41, .1);
+}
+.de-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.btn-main.btn-fullwidth {
+  display: block;
+}
+
+.btn-2{
+  color: #FFFFFF;
+  border: 2px solid #F5C843;
+  padding: 7px 15px;
+  box-shadow: #f5c84338 1px 1px 3px 3px, #f5c84340 0px 0px 3px 3px, #f5c84338 -1px -1px 3px 3px;
+  font-weight: 600;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  min-width: 64px;
+  box-sizing: border-box;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-weight: 500;
+  line-height: 1.75;
+  text-transform: capitalize;
+  cursor: pointer;
+  margin: 0;
+  display: inline-flex;
+  outline: 0;
+  position: relative;
+  align-items: center;
+  user-select: none;
+  vertical-align: middle;
+  -moz-appearance: none;
+  justify-content: center;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.btn-2 span {
+  width: 100%;
+  display: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+}
+.btn-2:hover {
+  color: #ffffff;
+  border: 2px solid #F5C843;
+  box-shadow: none;
+  background-color: #F5C843;
+}
+#video .modal-dialog {
+  max-width: 1000px;
+}
+
+.MuiTypography-h4 {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.235;
+}
+.jss190 .tablemainbox {
+  background: rgba(255, 255, 255, 0.08);
+  box-sizing: border-box;
+  margin-top: 8px;
+  border-radius: 8px;
+}
+.jss190 .activitysub {
+  padding: 20px;
+  border-bottom: 1px solid #3A3939;
+}
+
+.jss190 .activitysub h5 {
+  font-weight: 600;
+  margin-left: 10px;
+  font-size: 18px;
+  font-family: 'Ubuntu', sans-serif;
+  line-height: 1.334;
+}
+
+.jss192 .TableHeadrow th {
+  color: rgba(255, 255, 255, 0.5);
+  padding: 11px 12px 11px 12px !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  border-bottom: 1px solid #3A3939;
+  text-align: left;
+  line-height: 1.5rem;
+  display: table-cell;
+  vertical-align: inherit;
+}
+.jss198 .activitysub {
+  padding: 20px;
+  border-bottom: 1px solid #3A3939;
+}
+
+.jss191 td {
+  color: #fff;
+  font-size: 14px !important;
+  font-weight: 300;
+  padding:16px;
+}
+.jss190 .MuiTableCell-root.blue {
+  color: #509CE3;
+}
+
+.jss198 .activitysub h5 {
+  font-weight: 600;
+  margin-left: 10px;
+}
+.jss199 {
+  padding: 0px 22px;
+  min-width: 990px;
+  border-spacing: 0px 4px;
+  border-collapse: separate;
+}
+.MuiTypography-root {
+  margin: 0;
+}
+.MuiTableHead-root {
+  display: table-header-group;
+}
+.jss200 .TableHeadrow th {
+  color: rgba(255, 255, 255, 0.5);
+  padding: 11px 12px 11px 12px !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  border-bottom: 1px solid #3A3939;
+}
+.jss199 td {
+  color: #fff;
+  font-size: 14px !important;
+  font-weight: 300;
+  padding: 16px;
+}
+.jss198 .tablemainbox {
+  background: rgba(255, 255, 255, 0.08);
+  box-sizing: border-box;
+  margin-top: 8px;
+  border-radius: 8px;
+}
+.jss221 {
+  margin-top: 30px;
+}
+.jss221 .tablemainbox {
+  background: rgba(255, 255, 255, 0.08);
+  box-sizing: border-box;
+  margin-top: 8px;
+  border-radius: 8px;
+}
+.jss221 .activitysub {
+  padding: 20px;
+  border-bottom: 1px solid #3A3939;
+}
+.jss228 {
+  display: flex;
+  align-items: center;
+}
+.jss221 .activitysub svg {
+  font-size: 20px;
+}
+.jss221 .activitysub h5 {
+  font-weight: 600;
+  margin-left: 10px;
+}
+.jss223 .TableHeadrow th {
+  color: rgba(255, 255, 255, 0.5);
+  padding: 11px 12px 11px 12px !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  border-bottom: 1px solid #3A3939;
+}
+.jss222 {
+  padding: 0px 22px;
+  min-width: 990px;
+  border-spacing: 0px 4px;
+  border-collapse: separate;
+}
+.jss222 td {
+  color: #fff;
+  font-size: 14px !important;
+  font-weight: 300;
+  padding: 16px;
+}
+.jss224 {
+  display: flex;
+}
+.jss221 .MuiTableCell-root.blue {
+  color: #509CE3;
 }
