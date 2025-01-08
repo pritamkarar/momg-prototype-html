@@ -29,6 +29,8 @@ new WOW().init();
 (function ($) {
   "use strict";
 
+  var v_count = "0";
+
   function centerY() {
     jQuery(".full-height").each(function () {
       var dh = jQuery(window).innerHeight();
@@ -73,46 +75,252 @@ new WOW().init();
       btn.text(txt);
     });
   }
+  function de_counter() {
+    jQuery(".timer").each(function () {
+      var imagePos = jQuery(this).offset().top;
+      var topOfWindow = jQuery(window).scrollTop();
+      if (imagePos < topOfWindow + jQuery(window).height() && v_count == "0") {
+        jQuery(function ($) {
+          // start all the timers
+          jQuery(".timer").each(count);
+
+          function count(options) {
+            v_count = "1";
+            var $this = jQuery(this);
+            options = $.extend(
+              {},
+              options || {},
+              $this.data("countToOptions") || {}
+            );
+            $this.countTo(options);
+          }
+        });
+      }
+    });
+  }
+
+  function menu_arrow() {
+    // mainmenu create span
+    jQuery('#mainmenu li a').each(function() {
+        if ($(this).next("ul").length > 0) {
+            $("<span></span>").insertAfter($(this));
+        }
+    });
+    // mainmenu arrow click
+    jQuery("#mainmenu > li > span").on("click", function() {
+        
+        var iteration = $(this).data('iteration') || 1;
+        switch (iteration) {
+            case 1:
+                $(this).addClass("active");
+                $(this).parent().find("ul:first").css("height", "auto");
+                var curHeight = $(this).parent().find("ul:first").height();
+                $(this).parent().find("ul:first").css("height", "0");
+                $(this).parent().find("ul:first").animate({
+                    'height': curHeight
+                }, 300, 'easeOutQuint');
+      $('header').css("height", $('#mainmenu')[0].scrollHeight+curHeight+(parseInt($tmp_h)*2));
+                break;
+            case 2:
+     var curHeight = $(this).parent().find("ul:first").height();
+                $(this).removeClass("active");
+                $(this).parent().find("ul:first").animate({
+                    'height': "0"
+                }, 300, 'easeOutQuint');
+      $('header').css("height", $('#mainmenu')[0].scrollHeight-curHeight+(parseInt($tmp_h)*2));
+                break;
+        }
+        iteration++;
+        if (iteration > 2) iteration = 1;
+        $(this).data('iteration', iteration);
+    });
+    jQuery("#mainmenu > li > ul > li > span").on("click", function() {
+        var iteration = $(this).data('iteration') || 1;
+        switch (iteration) {
+            case 1:
+                $(this).addClass("active");
+                $(this).parent().find("ul:first").css("height", "auto");
+                $(this).parent().parent().parent().find("ul:first").css("height", "auto");
+                var curHeight = $(this).parent().find("ul:first").height();
+                $(this).parent().find("ul:first").css("height", "0");
+                $(this).parent().find("ul:first").animate({
+                    'height': curHeight
+                }, 400, 'easeInOutQuint');
+                break;
+            case 2:
+                $(this).removeClass("active");
+                $(this).parent().find("ul:first").animate({
+                    'height': "0"
+                }, 400, 'easeInOutQuint');
+                break;
+        }
+        iteration++;
+        if (iteration > 2) iteration = 1;
+        $(this).data('iteration', iteration);
+    });
+
+    jQuery(".nft__item_click").on("click", function() {
+        var iteration = $(this).data('iteration') || 1;
+        
+        switch (iteration) {
+            case 1:
+                var cover = jQuery(this).parent().parent().find('.nft__item_extra');
+                cover.css("visibility","visible");
+                cover.css("opacity","1");
+                break;
+            case 2:
+                var cover = jQuery(this).parent().parent().find('.nft__item_extra');
+                cover.css("visibility","hidden");
+                cover.css("opacity","0");
+                break;
+        }
+        iteration++;
+        if (iteration > 2) iteration = 1;
+        $(this).data('iteration', iteration);
+    });
+
+    $( ".nft__item" ).mouseleave(function() {
+       var cover = jQuery(this).find('.nft__item_extra');
+       cover.css("visibility","hidden");
+       cover.css("opacity","0");
+       jQuery(this).find('.nft__item_click').data('iteration', 1);
+    });
+
+    jQuery(".nft__item_like").on("click", function() {
+        var iteration = $(this).data('iteration') || 1;
+        
+        switch (iteration) {
+            case 1:
+                $(this).find("i").addClass("active");
+                var val = parseInt($(this).find("span").text())+1;
+                $(this).find("span").text(val);
+                break;
+            case 2:
+                $(this).find("i").removeClass("active");
+                var val = parseInt($(this).find("span").text())-1;
+                $(this).find("span").text(val);                   
+                break;
+        }
+        iteration++;
+        if (iteration > 2) iteration = 1;
+        $(this).data('iteration', iteration);
+    });
+
+    jQuery(".play-pause").on("click", function() {
+        var iteration = $(this).data('iteration') || 1;
+        var track = $(this).parent().parent().find('.track');
+        var circle = $(this).parent().parent().parent().find('.circle-ripple');
+
+        switch (iteration) {
+            case 1:
+               track[0].play();
+               $(this).addClass('pause');
+               $(this).removeClass('play');
+               circle.fadeIn();
+               break;
+            case 2:
+               track[0].pause();
+               $(this).addClass('play');
+               $(this).removeClass('pause');
+               circle.fadeOut();
+               break;
+        }
+
+        iteration++;
+        if (iteration > 2) iteration = 1;
+        $(this).data('iteration', iteration);
+    });
+
+    jQuery("#de-click-menu-profile").on("click", function() {
+        var iteration = $(this).data('iteration') || 1;
+        
+        switch (iteration) {
+            case 1:
+                $('#de-submenu-profile').show();
+                $('#de-submenu-profile').addClass('open');
+                $('#de-submenu-notification').removeClass('open');
+                $('#de-submenu-notification').hide();
+                $('#de-click-menu-notification').data('iteration', 1);
+                break;
+            case 2:
+                $('#de-submenu-profile').removeClass('open');
+                $('#de-submenu-profile').hide();        
+                break;
+        }
+        iteration++;
+        if (iteration > 2) iteration = 1;
+        $(this).data('iteration', iteration);
+    });
+
+
+    jQuery("#de-click-menu-notification").on("click", function() {
+        var iteration = $(this).data('iteration') || 1;
+        
+        switch (iteration) {
+            case 1:
+                $('#de-submenu-notification').show();
+                $('#de-submenu-notification').addClass('open');
+                $('#de-submenu-profile').removeClass('open');
+                $('#de-submenu-profile').hide();
+                $('#de-click-menu-profile').data('iteration', 1);
+                break;
+            case 2:
+                $('#de-submenu-notification').removeClass('open');
+                $('#de-submenu-notification').hide();        
+                break;
+        }
+        iteration++;
+        if (iteration > 2) iteration = 1;
+        $(this).data('iteration', iteration);
+    });
+}
 
   jQuery(document).ready(function () {
-    var $doc_height = jQuery(window).innerHeight();
-
-    $(".full-height").css("min-height", $doc_height);
-
-    jQuery(".nft__item_click").on("click", function () {
-      var iteration = $(this).data("iteration") || 1;
-
-      switch (iteration) {
-        case 1:
-          var cover = jQuery(this).parent().parent().find(".nft__item_extra");
-          cover.css("visibility", "visible");
-          cover.css("opacity", "1");
-          break;
-        case 2:
-          var cover = jQuery(this).parent().parent().find(".nft__item_extra");
-          cover.css("visibility", "hidden");
-          cover.css("opacity", "0");
-          break;
-      }
-      iteration++;
-      if (iteration > 2) iteration = 1;
-      $(this).data("iteration", iteration);
+    "use strict";
+    jQuery(window).on("scroll", function () {
+      de_counter();
     });
-
-    $(".nft__item").mouseleave(function () {
-      var cover = jQuery(this).find(".nft__item_extra");
-      cover.css("visibility", "hidden");
-      cover.css("opacity", "0");
-      jQuery(this).find(".nft__item_click").data("iteration", 1);
-    });
-
-    centerY();
-    load_owl();
-
-    dropdown("#item_category");
-    dropdown("#buy_category");
-    dropdown("#items_type");
   });
+
+  var $doc_height = jQuery(window).innerHeight();
+
+  $(".full-height").css("min-height", $doc_height);
+
+  jQuery(".nft__item_click").on("click", function () {
+    var iteration = $(this).data("iteration") || 1;
+
+    switch (iteration) {
+      case 1:
+        var cover = jQuery(this).parent().parent().find(".nft__item_extra");
+        cover.css("visibility", "visible");
+        cover.css("opacity", "1");
+        break;
+      case 2:
+        var cover = jQuery(this).parent().parent().find(".nft__item_extra");
+        cover.css("visibility", "hidden");
+        cover.css("opacity", "0");
+        break;
+    }
+    iteration++;
+    if (iteration > 2) iteration = 1;
+    $(this).data("iteration", iteration);
+  });
+
+  $(".nft__item").mouseleave(function () {
+    var cover = jQuery(this).find(".nft__item_extra");
+    cover.css("visibility", "hidden");
+    cover.css("opacity", "0");
+    jQuery(this).find(".nft__item_click").data("iteration", 1);
+  });
+  
+  menu_arrow();
+  centerY();
+  load_owl();
+  dropdown("#item_category");
+  dropdown("#buy_category");
+  dropdown("#items_type");
+  $('#mainmenu > li:has(ul)').addClass('menu-item-has-children');
+  $('#mainmenu li:has(ul)').addClass('has-child');
 })(jQuery);
 
 (function ($) {
