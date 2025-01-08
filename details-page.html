@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Login</title>
+    <title>MOMG - NFT Marketplace for Music, Well-being and Healthcare</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -26,7 +26,8 @@
 
     <link rel="stylesheet" href="./assests/styles/global.css" />
     <link rel="stylesheet" href="./assests/styles/header-footer.css" />
-    <link rel="stylesheet" href="./assests/styles/login.css" />
+    <link rel="stylesheet" href="./assests/styles/odometer.css" />
+    <link rel="stylesheet" href="./assests/styles/style.css" />
   </head>
 
   <body>
@@ -75,10 +76,7 @@
             </div>
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a
-                  class="nav-link"
-                  aria-current="page"
-                  href="./index.html"
+                <a class="nav-link" aria-current="page" href="./index.html"
                   >Home</a
                 >
               </li>
@@ -102,87 +100,46 @@
     </header>
 
     <main>
-      <section
-        class="full-height position-relative vertical-center"
-        data-stellar-background-ratio=".5"
-      >
-        <div class="overlay-gradient t50">
-          <div class="center-y relative">
-            <div class="container">
-              <div class="row align-items-center">
+      <section>
+        <div class="container">
+          <div class="row mt-5">
+            <div class="col-lg-6">
+              <div class="nft-image-wrapper">
+                <img
+                  src="./assests/images/details-img.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="item_info">
+                <span>Auctions ends in</span>
                 <div
-                  class="col-lg-5 text-light wow fadeInRight"
-                  data-wow-delay=".5s"
-                >
-                  <div class="spacer-10"></div>
-                  <h1>Create, sell or collect digital items.</h1>
-                  <p class="lead">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua ut enim.
-                  </p>
-                </div>
-
-                <div
-                  class="col-lg-4 offset-lg-2 wow fadeIn"
-                  data-wow-delay=".5s"
-                >
-                  <div class="box-rounded padding40" data-bgcolor="#21273e">
-                    <h3 class="mb10">Sign In</h3>
-                    <p>
-                      Login using an existing account or create a new account
-                      <a href="register.html">here<span></span></a>.
-                    </p>
-                    <form
-                      name="contactForm"
-                      id="contact_form"
-                      class="form-border"
-                      method="post"
-                      action="https://madebydesignesia.com/themes/gigaland/blank.php"
-                    >
-                      <div class="field-set">
-                        <input
-                          type="text"
-                          name="email"
-                          id="email"
-                          class="form-control"
-                          placeholder="username"
-                        />
-                      </div>
-
-                      <div class="field-set">
-                        <input
-                          type="password"
-                          name="password"
-                          id="password"
-                          class="form-control"
-                          placeholder="password"
-                        />
-                      </div>
-
-                      <div class="field-set">
-                        <input
-                          type="submit"
-                          id="send_message"
-                          value="Submit"
-                          class="btn btn-main btn-fullwidth color-2 w-100"
-                        />
-                      </div>
-
-                      <div class="clearfix"></div>
-
-                      <div class="spacer-single"></div>
-
-                      <!-- social icons -->
-                      <ul class="list s3">
-                        <li>Login with:</li>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Google</a></li>
-                      </ul>
-                      <!-- social icons close -->
-                    </form>
+                  class="de_countdown"
+                  data-year="2024"
+                  data-month="12"
+                  data-day="16"
+                  data-hour="8"
+                ></div>
+                <h2>Billionaire Jaat</h2>
+                <div class="item_info_counts">
+                  <div class="item_info_type">
+                    <i class="fa fa-image"></i>Art
+                  </div>
+                  <div class="item_info_views">
+                    <i class="fa fa-eye"></i>250
+                  </div>
+                  <div class="item_info_like">
+                    <i class="fa fa-heart"></i>18
                   </div>
                 </div>
+                <p>
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                  accusantium doloremque laudantium, totam rem aperiam, eaque
+                  ipsa quae ab illo inventore veritatis et quasi architecto
+                  beatae vitae dicta sunt explicabo.
+                </p>
               </div>
             </div>
           </div>
@@ -298,6 +255,21 @@
       crossorigin="anonymous"
     ></script>
     <script src="./assests/js/plugins.js"></script>
+    <script src="./assests/js/odometer.js"></script>
+    <script src="./assests/js/jquery-appear.js"></script>
     <script src="./assests/js/main.js"></script>
+    <script>
+       function de_countdown() {
+         $('.de_countdown').each(function() {
+             var y = $(this).data('year');
+             var m = $(this).data('month');
+             var d = $(this).data('day');
+             var h = $(this).data('hour');
+             $(this).countdown({until: new Date(y, m-1, d, h)});
+         });
+    }
+
+    de_countdown();
+    </script>
   </body>
 </html>
