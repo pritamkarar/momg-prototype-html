@@ -73,17 +73,17 @@
                 <i class="fa-solid fa-xmark"></i>
               </button>
             </div>
+
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a
-                  class="nav-link"
-                  aria-current="page"
-                  href="./index.html"
+                <a class="nav-link" aria-current="page" href="./index.html"
                   >Home</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="./music-nft.html">Marketplace</a>
+                <a class="nav-link active" href="./music-nft.html"
+                  >Marketplace</a
+                >
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="./about-us.html">About</a>
@@ -95,7 +95,48 @@
                 <a class="nav-link" href="./live-concert.html">Live Concerts</a>
               </li>
             </ul>
-            <button class="wallet-btn">Connect Wallet</button>
+            <ul id="mainmenu">
+              <li>
+                <div class="d-flex align-items-center">
+                  <a href="#" onclick="event.preventDefault();"
+                    >Pritam<span></span
+                  ></a>
+
+                  <div class="img-box">
+                    <img
+                      src="./assests/images/author/author-1.jpg"
+                      alt="some user image"
+                    />
+                  </div>
+                </div>
+                <ul>
+                  <p class="p-3">@probablykat66</p>
+                  <li>
+                    <a href="#" onclick="event.preventDefault();">
+                      <i class="fa-regular fa-user"></i>
+                      Profile</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" onclick="event.preventDefault();">
+                      <i class="fa-solid fa-bag-shopping"></i>
+                      My Orders</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" onclick="event.preventDefault();">
+                      <i class="fa-solid fa-gear"></i>Setting</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" onclick="event.preventDefault();">
+                      <i class="fa-solid fa-arrow-right-from-bracket"></i>Sign
+                      Out</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </div>
         </nav>
       </div>
@@ -178,182 +219,188 @@
             </div>
             <!-- nft item begin -->
             <div class="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12">
-              <div class="nft__item nft_type_music style-2">
-                <div
-                  class="de_countdown"
-                  data-year="2024"
-                  data-month="12"
-                  data-day="16"
-                  data-hour="8"
-                >
-                  <span class="countdown-row countdown-show3"
-                    ><span class="countdown-section"
-                      ><span class="countdown-amount">0h</span></span
-                    ><span class="countdown-section"
-                      ><span class="countdown-amount">0m</span></span
-                    ><span class="countdown-section"
-                      ><span class="countdown-amount">0s</span></span
-                    ></span
+              <a href="./details-page.html">
+                <div class="nft__item nft_type_music style-2">
+                  <div
+                    class="de_countdown"
+                    data-year="2024"
+                    data-month="12"
+                    data-day="16"
+                    data-hour="8"
                   >
-                </div>
-                <div class="author_list_pp">
-                  <a
-                    href="author.html"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="top"
-                    title="Creator: Monica Lucas"
-                  >
-                    <img
-                      class="lazy"
-                      src="./assests/images/author/author-1.jpg"
-                      alt=""
-                    />
-                    <i class="fa fa-check"></i>
-                  </a>
-                </div>
-                <div class="nft__item_wrap">
-                  <div class="nft__item_extra">
-                    <div class="nft__item_buttons">
-                      <button onclick="location.href='item-details.html'">
-                        Buy Now
-                      </button>
-                      <div class="nft__item_share">
-                        <h4>Share</h4>
-                        <a
-                          href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
-                          target="_blank"
-                          ><i class="fa-brands fa-facebook-f"></i
-                        ></a>
-                        <a
-                          href="https://twitter.com/intent/tweet?url=https://madebydesignesia.com/themes"
-                          target="_blank"
-                          ><i class="fa-brands fa-twitter"></i
-                        ></a>
-                        <a
-                          href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site https://madebydesignesia.com/themes"
-                          ><i class="fa-solid fa-envelope"></i
-                        ></a>
+                    <span class="countdown-row countdown-show3"
+                      ><span class="countdown-section"
+                        ><span class="countdown-amount">0h</span></span
+                      ><span class="countdown-section"
+                        ><span class="countdown-amount">0m</span></span
+                      ><span class="countdown-section"
+                        ><span class="countdown-amount">0s</span></span
+                      ></span
+                    >
+                  </div>
+                  <div class="author_list_pp">
+                    <a
+                      href="#"
+                      onclick="event.preventDefault();"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      title="Creator: Monica Lucas"
+                    >
+                      <img
+                        class="lazy"
+                        src="./assests/images/author/author-1.jpg"
+                        alt=""
+                      />
+                      <i class="fa fa-check"></i>
+                    </a>
+                  </div>
+                  <div class="nft__item_wrap">
+                    <div class="nft__item_extra">
+                      <div class="nft__item_buttons">
+                        <button onclick="location.href='item-details.html'">
+                          Buy Now
+                        </button>
+                        <div class="nft__item_share">
+                          <h4>Share</h4>
+                          <a
+                            href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
+                            target="_blank"
+                            ><i class="fa-brands fa-facebook-f"></i
+                          ></a>
+                          <a
+                            href="https://twitter.com/intent/tweet?url=https://madebydesignesia.com/themes"
+                            target="_blank"
+                            ><i class="fa-brands fa-twitter"></i
+                          ></a>
+                          <a
+                            href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site https://madebydesignesia.com/themes"
+                            ><i class="fa-solid fa-envelope"></i
+                          ></a>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="nft_type_wrap">
-                    <audio
-                      class="track"
-                      src="https://designesia.com/Cig Swaag - Jingle Punks.mp3"
-                      type="audio/mpeg"
-                    ></audio>
+                    <div class="nft_type_wrap">
+                      <audio
+                        class="track"
+                        src="https://designesia.com/Cig Swaag - Jingle Punks.mp3"
+                        type="audio/mpeg"
+                      ></audio>
 
-                    <div class="player-container">
-                      <div class="play-pause"></div>
+                      <div class="player-container">
+                        <div class="play-pause"></div>
+                      </div>
+
+                      <div class="circle-ripple"></div>
                     </div>
-
-                    <div class="circle-ripple"></div>
+                    <a href="./details-page.html">
+                      <img
+                        src="./assests/images/kykv3nbr8hzrjznb09x4.jpg"
+                        class="lazy nft__item_preview img-fluid"
+                        alt=""
+                      />
+                    </a>
                   </div>
-                  <a href="03_grey-item-details-audio.html">
-                    <img
-                      src="./assests/images/kykv3nbr8hzrjznb09x4.jpg"
-                      class="lazy nft__item_preview img-fluid"
-                      alt=""
-                    />
-                  </a>
-                </div>
-                <div class="nft__item_info">
-                  <a href="03_grey-item-details.html">
-                    <h4>Cig Swaag</h4>
-                  </a>
-                  <div class="nft__item_click">
-                    <span></span>
-                  </div>
-                  <div class="nft__item_price">0.08 ETH<span>1/20</span></div>
-                  <div class="nft__item_action">
-                    <a href="#">Place a bid</a>
-                  </div>
-                  <div class="nft__item_like">
-                    <i class="fa fa-heart"></i><span>50</span>
+                  <div class="nft__item_info">
+                    <a href="./details-page.html">
+                      <h4>Cig Swaag</h4>
+                    </a>
+                    <div class="nft__item_click">
+                      <span></span>
+                    </div>
+                    <div class="nft__item_price">0.08 ETH<span>1/20</span></div>
+                    <div class="nft__item_action">
+                      <a href="#">Place a bid</a>
+                    </div>
+                    <div class="nft__item_like">
+                      <i class="fa fa-heart"></i><span>50</span>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
             <!-- nft item begin -->
             <div class="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12">
-              <div class="nft__item nft_type_music style-2">
-                <div class="author_list_pp">
-                  <a
-                    href="author.html"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="top"
-                    title="Creator: Stacy Long"
-                  >
-                    <img
-                      class="lazy"
-                      src="./assests/images/author/author-10.jpg"
-                      alt=""
-                    />
-                    <i class="fa fa-check"></i>
-                  </a>
-                </div>
-                <div class="nft__item_wrap">
-                  <div class="nft__item_extra">
-                    <div class="nft__item_buttons">
-                      <button onclick="location.href='item-details.html'">
-                        Buy Now
-                      </button>
-                      <div class="nft__item_share">
-                        <h4>Share</h4>
-                        <a
-                          href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
-                          target="_blank"
-                          ><i class="fa-brands fa-facebook-f"></i
-                        ></a>
-                        <a
-                          href="https://twitter.com/intent/tweet?url=https://madebydesignesia.com/themes"
-                          target="_blank"
-                          ><i class="fa-brands fa-twitter"></i
-                        ></a>
-                        <a
-                          href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site https://madebydesignesia.com/themes"
-                          ><i class="fa-solid fa-envelope"></i
-                        ></a>
+              <a href="./details-page.html">
+                <div class="nft__item nft_type_music style-2">
+                  <div class="author_list_pp">
+                    <a
+                      href="#"
+                      onclick="event.preventDefault();"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      title="Creator: Stacy Long"
+                    >
+                      <img
+                        class="lazy"
+                        src="./assests/images/author/author-10.jpg"
+                        alt=""
+                      />
+                      <i class="fa fa-check"></i>
+                    </a>
+                  </div>
+                  <div class="nft__item_wrap">
+                    <div class="nft__item_extra">
+                      <div class="nft__item_buttons">
+                        <button onclick="location.href='item-details.html'">
+                          Buy Now
+                        </button>
+                        <div class="nft__item_share">
+                          <h4>Share</h4>
+                          <a
+                            href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
+                            target="_blank"
+                            ><i class="fa-brands fa-facebook-f"></i
+                          ></a>
+                          <a
+                            href="https://twitter.com/intent/tweet?url=https://madebydesignesia.com/themes"
+                            target="_blank"
+                            ><i class="fa-brands fa-twitter"></i
+                          ></a>
+                          <a
+                            href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site https://madebydesignesia.com/themes"
+                            ><i class="fa-solid fa-envelope"></i
+                          ></a>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="nft_type_wrap">
-                    <audio
-                      class="track"
-                      src="https://designesia.com/Cig Swaag - Jingle Punks.mp3"
-                      type="audio/mpeg"
-                    ></audio>
+                    <div class="nft_type_wrap">
+                      <audio
+                        class="track"
+                        src="https://designesia.com/Cig Swaag - Jingle Punks.mp3"
+                        type="audio/mpeg"
+                      ></audio>
 
-                    <div class="player-container">
-                      <div class="play-pause"></div>
+                      <div class="player-container">
+                        <div class="play-pause"></div>
+                      </div>
+
+                      <div class="circle-ripple"></div>
                     </div>
-
-                    <div class="circle-ripple"></div>
+                    <a href="./details-page.html">
+                      <img
+                        src="./assests/images/vlrdjryxnj9j9yo5uqro.jpg"
+                        class="lazy nft__item_preview img-fluid"
+                        alt=""
+                      />
+                    </a>
                   </div>
-                  <a href="03_grey-item-details-audio.html">
-                    <img
-                      src="./assests/images/vlrdjryxnj9j9yo5uqro.jpg"
-                      class="lazy nft__item_preview img-fluid"
-                      alt=""
-                    />
-                  </a>
-                </div>
-                <div class="nft__item_info">
-                  <a href="03_grey-item-details.html">
-                    <h4>Kick Shock</h4>
-                  </a>
-                  <div class="nft__item_click">
-                    <span></span>
-                  </div>
-                  <div class="nft__item_price">0.06 ETH<span>1/22</span></div>
-                  <div class="nft__item_action">
-                    <a href="#">Place a bid</a>
-                  </div>
-                  <div class="nft__item_like">
-                    <i class="fa fa-heart"></i><span>80</span>
+                  <div class="nft__item_info">
+                    <a href="./details-page.html">
+                      <h4>Kick Shock</h4>
+                    </a>
+                    <div class="nft__item_click">
+                      <span></span>
+                    </div>
+                    <div class="nft__item_price">0.06 ETH<span>1/22</span></div>
+                    <div class="nft__item_action">
+                      <a href="#">Place a bid</a>
+                    </div>
+                    <div class="nft__item_like">
+                      <i class="fa fa-heart"></i><span>80</span>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>

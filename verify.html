@@ -73,12 +73,10 @@
                 <i class="fa-solid fa-xmark"></i>
               </button>
             </div>
+
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a
-                  class="nav-link "
-                  aria-current="page"
-                  href="./index.html"
+                <a class="nav-link" aria-current="page" href="./index.html"
                   >Home</a
                 >
               </li>
@@ -95,7 +93,48 @@
                 <a class="nav-link" href="./live-concert.html">Live Concerts</a>
               </li>
             </ul>
-            <button class="wallet-btn">Connect Wallet</button>
+            <ul id="mainmenu">
+              <li>
+                <div class="d-flex align-items-center">
+                  <a href="#" onclick="event.preventDefault();"
+                    >Pritam<span></span
+                  ></a>
+
+                  <div class="img-box">
+                    <img
+                      src="./assests/images/author/author-1.jpg"
+                      alt="some user image"
+                    />
+                  </div>
+                </div>
+                <ul>
+                  <p class="p-3">@probablykat66</p>
+                  <li>
+                    <a href="#" onclick="event.preventDefault();">
+                      <i class="fa-regular fa-user"></i>
+                      Profile</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" onclick="event.preventDefault();">
+                      <i class="fa-solid fa-bag-shopping"></i>
+                      My Orders</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" onclick="event.preventDefault();">
+                      <i class="fa-solid fa-gear"></i>Setting</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" onclick="event.preventDefault();">
+                      <i class="fa-solid fa-arrow-right-from-bracket"></i>Sign
+                      Out</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </div>
         </nav>
       </div>
@@ -127,13 +166,16 @@
                 If the verification link has expired, you can request a new
                 verification email.
               </p>
-              <a href="/resend-verification" class="btn-main color-2"
+              <a
+                href="#"
+                onclick="event.preventDefault();"
+                class="btn-main color-2"
                 >Resend Verification Email</a
               >
               <br />
               <p class="mt-3">
                 If you continue to face issues, please
-                <a href="/contact-support">contact support</a>.
+                <a href="./contact-us.html">contact support</a>.
               </p>
             </div>
           </div>

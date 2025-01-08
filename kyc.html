@@ -148,12 +148,10 @@
                 <i class="fa-solid fa-xmark"></i>
               </button>
             </div>
+
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a
-                  class="nav-link"
-                  aria-current="page"
-                  href="./index.html"
+                <a class="nav-link" aria-current="page" href="./index.html"
                   >Home</a
                 >
               </li>
@@ -170,7 +168,48 @@
                 <a class="nav-link" href="./live-concert.html">Live Concerts</a>
               </li>
             </ul>
-            <button class="wallet-btn">Connect Wallet</button>
+            <ul id="mainmenu">
+              <li>
+                <div class="d-flex align-items-center">
+                  <a href="#" onclick="event.preventDefault();"
+                    >Pritam<span></span
+                  ></a>
+
+                  <div class="img-box">
+                    <img
+                      src="./assests/images/author/author-1.jpg"
+                      alt="some user image"
+                    />
+                  </div>
+                </div>
+                <ul>
+                  <p class="p-3">@probablykat66</p>
+                  <li>
+                    <a href="#" onclick="event.preventDefault();">
+                      <i class="fa-regular fa-user"></i>
+                      Profile</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" onclick="event.preventDefault();">
+                      <i class="fa-solid fa-bag-shopping"></i>
+                      My Orders</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" onclick="event.preventDefault();">
+                      <i class="fa-solid fa-gear"></i>Setting</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" onclick="event.preventDefault();">
+                      <i class="fa-solid fa-arrow-right-from-bracket"></i>Sign
+                      Out</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </div>
         </nav>
       </div>
@@ -206,7 +245,11 @@
                     Connect with Digilocker to securely fetch and verify your
                     documents.
                   </p>
-                  <a href="/connect-digilocker" class="btn-main">
+                  <a
+                    href="#"
+                    onclick="event.preventDefault();"
+                    class="btn-main"
+                  >
                     Connect to DigiLocker
                   </a>
                   <p class="mt-3">
@@ -341,7 +384,7 @@
                 </div>
               </div>
               <div class="mt-3">
-                <button class="btn-main">Submit</button>
+                <button type="button" class="btn-main">Submit</button>
               </div>
             </form>
           </div>
