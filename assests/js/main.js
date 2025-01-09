@@ -474,6 +474,8 @@ new WOW().init();
   dropdown("#select_scheme");
   dropdown("#select_lang");
   dropdown("#item_collection");
+  dropdown("#filter_by_duration");
+  dropdown("#filter_by_category");
   $("#mainmenu > li:has(ul)").addClass("menu-item-has-children");
   $("#mainmenu li:has(ul)").addClass("has-child");
 })(jQuery);

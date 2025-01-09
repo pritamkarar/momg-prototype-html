@@ -252,7 +252,7 @@
           <div class="container">
             <div class="row">
               <div class="col-md-12 text-center">
-                <h1>Create Music NFT</h1>
+                <h1>Wallet</h1>
               </div>
               <div class="clearfix"></div>
             </div>
@@ -260,255 +260,97 @@
         </div>
       </section>
 
-      <!-- section begin -->
       <section aria-label="section">
         <div class="container">
-          <div class="row wow fadeIn">
-            <div class="col-lg-7 offset-lg-1">
-              <form
-                id="form-create-item"
-                class="form-border"
-                method="post"
-                action="https://madebydesignesia.com/themes/gigaland/email.php"
-              >
-                <div class="field-set">
-                  <h5>Upload file</h5>
-
-                  <div class="d-create-file">
-                    <p id="file_name" class="mb-4">
-                      PNG, JPG, GIF, WEBP or MP4. Max 200mb.
-                    </p>
-                    <input
-                      type="button"
-                      id="get_file"
-                      class="btn-main"
-                      value="Browse"
-                    />
-                    <input type="file" id="upload_file" />
-                  </div>
-
-                  <div class="spacer-40"></div>
-
-                  <h5>Select method</h5>
-                  <div class="de_tab tab_methods">
-                    <ul class="de_nav">
-                      <li class="active">
-                        <span><i class="fa fa-tag"></i>Fixed price</span>
-                      </li>
-                      <li>
-                        <span
-                          ><i class="fa fa-hourglass-1"></i>Timed auction</span
-                        >
-                      </li>
-                      <li>
-                        <span><i class="fa fa-users"></i>Open for bids</span>
-                      </li>
-                    </ul>
-
-                    <div class="de_tab_content">
-                      <div id="tab_opt_1">
-                        <h5>Price</h5>
-                        <input
-                          type="text"
-                          name="item_price"
-                          id="item_price"
-                          class="form-control"
-                          placeholder="enter price for one item (MOMG)"
-                        />
-                      </div>
-
-                      <div id="tab_opt_2">
-                        <h5>Minimum bid</h5>
-                        <input
-                          type="text"
-                          name="item_price_bid"
-                          id="item_price_bid"
-                          class="form-control"
-                          placeholder="enter minimum bid"
-                        />
-
-                        <div class="spacer-20"></div>
-
-                        <div class="row">
-                          <div class="col-md-6">
-                            <h5>Starting date</h5>
-                            <input
-                              type="date"
-                              name="bid_starting_date"
-                              id="bid_starting_date"
-                              class="form-control"
-                              min="1997-01-01"
-                            />
-                          </div>
-                          <div class="col-md-6">
-                            <h5>Expiration date</h5>
-                            <input
-                              type="date"
-                              name="bid_expiration_date"
-                              id="bid_expiration_date"
-                              class="form-control"
-                            />
-                          </div>
-                        </div>
-                      </div>
-
-                      <div id="tab_opt_3"></div>
-                    </div>
-                  </div>
-
-                  <div class="spacer-20"></div>
-
-                  <div class="switch-with-title">
-                    <h5>
-                      <i
-                        class="fa fa- fa-unlock-alt id-color-2 icon_padlock"
-                      ></i
-                      >Unlock once purchased
-                    </h5>
-                    <div class="de-switch">
-                      <input
-                        type="checkbox"
-                        id="switch-unlock"
-                        class="checkbox"
-                      />
-                      <label for="switch-unlock"></label>
-                    </div>
-                    <div class="clearfix"></div>
-                    <p class="p-info">
-                      Unlock content after successful transaction.
-                    </p>
-
-                    <div class="hide-content">
-                      <input
-                        type="text"
-                        name="item_unlock"
-                        id="item_unlock"
-                        class="form-control"
-                        placeholder="Access key, code to redeem or link to a file..."
-                      />
-                    </div>
-                  </div>
-
-                  <div class="spacer-20"></div>
-
-                  <h5>Choose collection</h5>
-                  <p class="p-info">
-                    This is the collection where your item will appear.
-                  </p>
-
-                  <div id="item_collection" class="dropdown fullwidth mb20">
-                    <a href="#" class="btn-selector">Select Collection</a>
-                    <ul>
-                      <li><span>Abstraction</span></li>
-                      <li><span>Patternlicious</span></li>
-                      <li><span>Skecthify</span></li>
-                      <li><span>Cartoonism</span></li>
-                      <li><span>Virtuland</span></li>
-                      <li><span>Papercut</span></li>
-                    </ul>
-                  </div>
-
-                  <div class="spacer-20"></div>
-
-                  <h5>Title</h5>
-                  <input
-                    type="text"
-                    name="item_title"
-                    id="item_title"
-                    class="form-control"
-                    placeholder="e.g. 'Crypto Funk"
-                  />
-
-                  <div class="spacer-20"></div>
-
-                  <h5>Description</h5>
-                  <textarea
-                    data-autoresize
-                    name="item_desc"
-                    id="item_desc"
-                    class="form-control"
-                    placeholder="e.g. 'This is very limited item'"
-                  ></textarea>
-
-                  <div class="spacer-20"></div>
-                  <h5>Track URL</h5>
-                  <input
-                    type="text"
-                    name="item_royalties"
-                    id="item_royalties"
-                    class="form-control"
-                    placeholder="e.g. https://www.youtube.com/watch?v=5rfuNBI7iN0"
-                  />
-                  <div class="spacer-20"></div>
-
-                  <h5>Royalties</h5>
-                  <input
-                    type="text"
-                    name="item_royalties"
-                    id="item_royalties"
-                    class="form-control"
-                    placeholder="suggested: 0, 10%, 20%, 30%. Maximum is 70%"
-                  />
-
-                  <div class="spacer-single"></div>
-
-                  <input
-                    type="button"
-                    id="submit"
-                    class="btn-main"
-                    value="Create Item"
-                  />
-                  <div class="spacer-single"></div>
-                </div>
-              </form>
+          <div class="row">
+            <div class="col-lg-3 mb30">
+              <a class="box-url" href="03_grey-login.html">
+                <span class="box-url-label">Most Popular</span>
+                <img src="./assests/images/wallet/1.png" alt="" class="mb20" />
+                <h4>Metamask</h4>
+                <p>
+                  Start exploring blockchain applications in seconds. Trusted by
+                  over 1 million users worldwide.
+                </p>
+              </a>
             </div>
 
-            <div class="col-lg-3 col-sm-6 col-xs-12">
-              <h5>Preview item</h5>
-              <div class="nft__item style-2">
-                <div
-                  class="de_countdown"
-                  data-year="2024"
-                  data-month="12"
-                  data-day="16"
-                  data-hour="8"
-                ></div>
-                <div class="author_list_pp">
-                  <a href="./author-public-profile.html">
-                    <img
-                      class="lazy"
-                      src="./assests/images/author/author-1.jpg"
-                      alt=""
-                    />
-                    <i class="fa fa-check"></i>
-                  </a>
-                </div>
-                <div class="nft__item_wrap">
-                  <a href="#">
-                    <img
-                      src="./assests/images/collections/coll-thumbnail-3.jpg"
-                      id="get_file_2"
-                      class="lazy nft__item_preview"
-                      alt=""
-                    />
-                  </a>
-                </div>
-                <div class="nft__item_info">
-                  <a href="#">
-                    <h4>Pinky Ocean</h4>
-                  </a>
-                  <div class="nft__item_click">
-                    <span></span>
-                  </div>
-                  <div class="nft__item_price">0.08 MOMG<span>1/20</span></div>
-                  <div class="nft__item_action">
-                    <a href="#">Buy Now</a>
-                  </div>
-                  <div class="nft__item_like">
-                    <i class="fa fa-heart"></i><span>50</span>
-                  </div>
-                </div>
-              </div>
+            <div class="col-lg-3 mb30">
+              <a class="box-url" href="03_grey-login.html">
+                <img src="./assests/images/wallet/2.png" alt="" class="mb20" />
+                <h4>Bitski</h4>
+                <p>
+                  Bitski connects communities, creators and brands through
+                  unique, ownable digital content.
+                </p>
+              </a>
+            </div>
+
+            <div class="col-lg-3 mb30">
+              <a class="box-url" href="03_grey-login.html">
+                <img src="./assests/images/wallet/3.png" alt="" class="mb20" />
+                <h4>Fortmatic</h4>
+                <p>
+                  Let users access your Ethereum app from anywhere. No more
+                  browser extensions.
+                </p>
+              </a>
+            </div>
+
+            <div class="col-lg-3 mb30">
+              <a class="box-url" href="03_grey-login.html">
+                <img src="./assests/images/wallet/4.png" alt="" class="mb20" />
+                <h4>WalletConnect</h4>
+                <p>
+                  Open source protocol for connecting decentralised applications
+                  to mobile wallets.
+                </p>
+              </a>
+            </div>
+
+            <div class="col-lg-3 mb30">
+              <a class="box-url" href="03_grey-login.html">
+                <img src="./assests/images/wallet/5.png" alt="" class="mb20" />
+                <h4>Coinbase Wallet</h4>
+                <p>
+                  The easiest and most secure crypto wallet. ... No Coinbase
+                  account required.
+                </p>
+              </a>
+            </div>
+
+            <div class="col-lg-3 mb30">
+              <a class="box-url" href="03_grey-login.html">
+                <img src="./assests/images/wallet/6.png" alt="" class="mb20" />
+                <h4>Arkane</h4>
+                <p>
+                  Make it easy to create blockchain applications with secure
+                  wallets solutions.
+                </p>
+              </a>
+            </div>
+
+            <div class="col-lg-3 mb30">
+              <a class="box-url" href="03_grey-login.html">
+                <img src="./assests/images/wallet/7.png" alt="" class="mb20" />
+                <h4>Authereum</h4>
+                <p>
+                  Your wallet where you want it. Log into your favorite dapps
+                  with Authereum.
+                </p>
+              </a>
+            </div>
+
+            <div class="col-lg-3 mb30">
+              <a class="box-url" href="03_grey-login.html">
+                <span class="box-url-label">Most Simple</span>
+                <img src="./assests/images/wallet/8.png" alt="" class="mb20" />
+                <h4>Torus</h4>
+                <p>
+                  Open source protocol for connecting decentralised applications
+                  to mobile wallets.
+                </p>
+              </a>
             </div>
           </div>
         </div>
