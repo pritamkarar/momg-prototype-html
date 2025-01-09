@@ -36,7 +36,8 @@ h1,
   letter-spacing: -1px;
   color: #fff;
 }
-span.id-color-2 {
+span.id-color-2,
+.id-color-2 {
   color: #ffb329;
 }
 p.lead {
@@ -1302,6 +1303,9 @@ svg {
   padding: 0;
   font-weight: bold;
 }
+.de_tab.tab_simple .de_nav li span i {
+  padding-right: 10px;
+}
 .de_tab .de_nav li {
   float: left;
   list-style: none;
@@ -1316,6 +1320,11 @@ svg {
 
 .de_tab.tab_simple .de_nav li.active span {
   color: #ffffff;
+}
+.field-set h5 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
 }
 
 .de_tab .de_nav li span {
@@ -2008,4 +2017,302 @@ ol {
   display: inline-block;
   margin-right: 3px;
   margin-bottom: 16px;
+}
+
+.spacer-20 {
+  width: 100%;
+  height: 20px;
+  display: block;
+  clear: both;
+}
+.switch-with-title {
+  border: solid 1px rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  padding-bottom: 10px;
+}
+
+h5 {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+.de-switch {
+  display: block;
+}
+.switch-with-title .de-switch {
+  float: right;
+}
+.switch-with-title h5 {
+  float: left;
+}
+.de-switch input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+}
+.de-switch label {
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 200ms ease-in-out;
+  display: inline-block;
+  position: relative;
+  height: 20px;
+  width: 40px;
+  border-radius: 40px;
+  cursor: pointer;
+  color: transparent;
+}
+
+.de-switch label:after {
+  transition: all 200ms ease-in-out;
+  content: " ";
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background-color: white;
+  top: 3px;
+  left: 3px;
+  right: auto;
+}
+.de-switch input[type="checkbox"]:checked + label:after {
+  left: 23px;
+}
+.de-switch input[type="checkbox"]:checked + label {
+  background: #ffb329;
+}
+
+p.p-info {
+  font-size: 14px;
+  margin: 0;
+  padding: 0 0 10px 0;
+}
+
+.dropdown.fullwidth,
+.dropdown.fullwidth a,
+.dropdown.fullwidth ul,
+.dropdown.fullwidth li {
+  width: 100%;
+}
+
+.dropdown > a {
+  border: solid 1px rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+.dropdown.fullwidth,
+.dropdown.fullwidth a,
+.dropdown.fullwidth ul,
+.dropdown.fullwidth li {
+  width: 100%;
+}
+.dropdown.fullwidth li span {
+  color: #999999;
+}
+
+.tooltip-inner,
+.tooltip.bs-tooltip-top .tooltip-arrow::before,
+.tooltip.bs-tooltip-bottom .tooltip-arrow::before,
+.tooltip.bs-tooltip-start .tooltip-arrow::before,
+.tooltip.bs-tooltip-end .tooltip-arrow::before {
+  box-shadow: 0 0.25rem 0.5rem rgb(0 0 0 / 5%), 0 1.5rem 2.2rem rgb(0 0 0 / 10%);
+}
+
+.tooltip-inner {
+  max-width: 200px;
+  padding: 0.25rem 0.5rem;
+  color: #fff;
+  text-align: center;
+  background-color: #000;
+  border-radius: 0.25rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: #999999;
+  font-weight: 500;
+}
+.tooltip.bs-tooltip-top .tooltip-arrow::before {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+.d-profile-img-edit {
+  border-radius: 100%;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+}
+.spacer-30 {
+  width: 100%;
+  height: 30px;
+  display: block;
+  clear: both;
+}
+#upload_profile_img,
+#upload_banner_img {
+  display: none;
+}
+.d-banner-img-edit {
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+
+.d_profile {
+  margin-bottom: 40px;
+}
+
+.de-flex > .de-flex-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile_avatar {
+  display: flex;
+}
+.profile_avatar img,
+.profile_name {
+  display: flex;
+  align-items: center;
+}
+.profile_avatar img {
+  border-radius: 100%;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  width: 150px;
+  height: auto;
+}
+.profile_avatar i {
+  color: #ffffff;
+  margin: 110px 0 0 110px;
+  display: block;
+  position: absolute;
+  padding: 10px;
+  border-radius: 100%;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  background: #ffb329;
+}
+
+.profile_name {
+  margin-left: 20px;
+}
+.profile_name h4 {
+  font-size: 24px;
+  line-height: 1.3em;
+  color: #fff;
+}
+.profile_username {
+  display: block;
+  color: #ffb329;
+}
+.profile_username,
+.profile_wallet {
+  font-size: 16px;
+  font-weight: 500;
+}
+.profile_wallet {
+  color: #999999;
+}
+
+.profile_wallet {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+  overflow: hidden;
+  float: left;
+  color: #727272;
+}
+
+#btn_copy {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  padding: 6px 12px;
+  position: absolute;
+  font-size: 12px;
+  padding: 4px 10px;
+  line-height: 1em;
+  display: inline-block;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  outline: none;
+}
+.profile_follower {
+  margin-right: 20px;
+  font-weight: 600;
+}
+.profile_follower {
+  color: #ffffff;
+}
+
+.d-create-file {
+  padding: 50px;
+  border-radius: 10px;
+  border: dashed 3px rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+.d-create-file p {
+  color: #ffffff;
+}
+#upload_file {
+  display: none;
+}
+
+.de_tab.tab_methods .de_nav li {
+  background: none;
+  display: inline-block;
+  float: none;
+  margin: 0 10px 0 0;
+}
+.de_tab.tab_methods .de_nav li span {
+  padding: 35px 10px;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  border-radius: 12px;
+  min-width: 140px;
+  border: solid 1px rgba(255, 255, 255, 0.1);
+}
+.de_tab.tab_methods .de_nav li span i {
+  display: block;
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #ffb329;
+}
+.de_tab.tab_methods .de_nav li.active span i {
+  color: #ffb329;
+}
+
+.de_tab.tab_methods .de_nav li.active span {
+  border-color: #ffb329;
+  color: #fff;
+}
+.de_tab.tab_methods .de_nav li span i {
+  display: block;
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #999999;
+}
+.de_tab.tab_methods .de_nav li span {
+  color: #999999;
+}
+
+.icon_padlock {
+  margin-right: 10px;
+}
+.hide-content {
+  display: none;
+}
+
+.form-border input[type="date"] {
+  color: #ffffff;
+}
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
 }

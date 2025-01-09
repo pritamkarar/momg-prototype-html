@@ -37,7 +37,7 @@
     }
     .upload-thumb {
       background: #212428;
-      border: 1px solid #a1a6c8;
+      border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: 0.25rem;
       box-shadow: 0.125rem 0.125rem 0.0625rem rgba(0, 0, 0, 0.12);
       width: 100%;
@@ -46,14 +46,15 @@
       align-items: center;
       justify-content: center;
       min-height: 240px;
+      cursor: pointer;
     }
     .upload-thumb i {
       font-size: 65px;
-      color: #a1a6c8;
+      color: rgba(255, 255, 255, 0.2);
     }
     .img-thumbs {
       background: #212428;
-      border: 1px solid #a1a6c8;
+      border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: 0.25rem;
       margin: 1.5rem 0;
       padding: 0.75rem;
@@ -151,7 +152,10 @@
 
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="./index.html"
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./index.html"
                   >Home</a
                 >
               </li>
@@ -185,9 +189,15 @@
                 <ul>
                   <p class="p-3">@probablykat66</p>
                   <li>
-                    <a href="#" onclick="event.preventDefault();">
+                    <a href="./profile.html">
                       <i class="fa-regular fa-user"></i>
                       Profile</a
+                    >
+                  </li>
+                  <li>
+                    <a href="./create-single.html">
+                      <i class="fa-solid fa-plus"></i>
+                      Create Music NFT</a
                     >
                   </li>
                   <li>
@@ -202,8 +212,8 @@
                     >
                   </li>
                   <li>
-                    <a href="#" onclick="event.preventDefault();">
-                      <i class="fa-solid fa-arrow-right-from-bracket"></i>Sign
+                    <a href="./login.html">
+                      <i class="fa-solid fa-arrow-right-from-bracket"></i>Log
                       Out</a
                     >
                   </li>
@@ -233,10 +243,10 @@
       </section>
 
       <!-- Verification Options Section -->
-      <section class="pt-0">
+      <section>
         <div class="container">
           <div class="row">
-            <div class="col-md-6 mb-4">
+            <div class="col-md-6 mb-4 mx-auto">
               <!-- Digilocker Verification -->
               <div class="box-rounded box-url padding40" data-bgcolor="#21273e">
                 <div class="card-body text-center">
@@ -271,7 +281,7 @@
           </div>
           <div class="manual-upload mt-4" style="display: none">
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-6 mx-auto mb-4">
                 <div class="wrapper-dropdown" id="dropdown">
                   <span class="selected-display" id="destination"
                     >Pick an option</span
@@ -383,7 +393,7 @@
                   </div>
                 </div>
               </div>
-              <div class="mt-3">
+              <div class="mt-4 d-flex justify-content-center">
                 <button type="button" class="btn-main m-0">Submit</button>
               </div>
             </form>

@@ -103,9 +103,10 @@ textarea.form-control {
   clear: both;
 }
 .list.s3 {
-  display: inline;
+  display: inline-flex;
   margin: 0;
   padding: 0;
+  align-items: center;
 }
 .list.s3 li {
   display: inline;
@@ -113,6 +114,12 @@ textarea.form-control {
 }
 .list.s3 a {
   font-weight: bold;
+}
+.list.s3 a img {
+  width: 50px;
+}
+.list.s3 a img.face-book {
+  width: 40px;
 }
 #subheader {
   text-align: center;

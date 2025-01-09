@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MOMG - NFT Marketplace for Music, Well-being and Healthcare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./assests/styles/global.css" />
+    <link rel="stylesheet" href="./assests/styles/header-footer.css" />
+    <link rel="stylesheet" href="./assests/styles/odometer.css" />
+    <link rel="stylesheet" href="./assests/styles/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <nav class="navbar navbar-expand-xl">
+          <a class="navbar-brand" href="./index.html">
+            <img
+              src="./assests/images/logo.webp"
+              alt="logo"
+              title="logo"
+              class="img-fluid"
+            />
+          </a>
+          <form class="d-flex position-relative me-auto" role="search">
+            <input
+              class="form-control search"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </form>
+          <div class="back-drop d-xl-none"></div>
+          <button class="navbar-toggler" type="button">
+            <span class="navbar-toggler-icon"
+              ><i class="fa-solid fa-bars-staggered"></i
+            ></span>
+          </button>
+          <div class="navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex justify-content-between">
+              <a class="navbar-brand d-xl-none" href="./index.html">
+                <img
+                  src="./assests/images/logo.webp"
+                  alt="logo"
+                  title="logo"
+                  class="img-fluid"
+                />
+              </a>
+              <button
+                type="button"
+                class="close-icon align-self-baseline d-xl-none"
+              >
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./music-nft.html">Marketplace</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./about-us.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./features.html">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./live-concert.html">Live Concerts</a>
+              </li>
+            </ul>
+            <ul id="mainmenu">
+              <li>
+                <div class="d-flex align-items-center">
+                  <a href="#" onclick="event.preventDefault();"
+                    >Pritam<span></span
+                  ></a>
+
+                  <div class="img-box">
+                    <img
+                      src="./assests/images/author/author-1.jpg"
+                      alt="some user image"
+                    />
+                  </div>
+                </div>
+                <ul>
+                  <p class="p-3">@probablykat66</p>
+                  <li>
+                    <a href="./profile.html">
+                      <i class="fa-regular fa-user"></i>
+                      Profile</a
+                    >
+                  </li>
+                  <li>
+                    <a href="./create-single.html">
+                      <i class="fa-solid fa-plus"></i>
+                      Create Music NFT</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" onclick="event.preventDefault();">
+                      <i class="fa-solid fa-bag-shopping"></i>
+                      My Orders</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" onclick="event.preventDefault();">
+                      <i class="fa-solid fa-gear"></i>Setting</a
+                    >
+                  </li>
+                  <li>
+                    <a href="./login.html">
+                      <i class="fa-solid fa-arrow-right-from-bracket"></i>Log
+                      Out</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section aria-label="section" style="padding-top: 150px">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="d_profile de-flex">
+                <div class="de-flex-col">
+                  <div class="profile_avatar">
+                    <img src="./assests/images/author/author-1.jpg" alt="" />
+                    <i class="fa fa-check"></i>
+                    <div class="profile_name">
+                      <h4>
+                        Monica Lucas
+                        <span class="profile_username">@monicaaa</span>
+                        <span id="wallet" class="profile_wallet"
+                          >DdzFFzCqrhshMSxb9oW3mRo4MJrQkusV3fGFSTwaiu4wPBqMryA9DYVJCkW9n7twCffG5f5wX2sSkoDXGiZB1HPa7K7f865Kk4LqnrME</span
+                        >
+                        <button id="btn_copy" title="Copy Text">Copy</button>
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="profile_follow de-flex">
+                  <div class="de-flex-col">
+                    <div class="profile_follower">500 followers</div>
+                  </div>
+                  <div class="de-flex-col">
+                    <a href="#" class="btn-main">Follow</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              <div class="de_tab tab_simple">
+                <ul class="de_nav">
+                  <li class="active"><span>On Sale</span></li>
+                  <li><span>Created</span></li>
+                  <li><span>Liked</span></li>
+                </ul>
+
+                <div class="de_tab_content">
+                  <div class="tab-1">
+                    <div class="row">
+                      <!-- nft item begin -->
+                      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="nft__item style-2">
+                          <div
+                            class="de_countdown"
+                            data-year="2024"
+                            data-month="12"
+                            data-day="16"
+                            data-hour="8"
+                          ></div>
+
+                          <div class="nft__item_wrap">
+                            <div class="nft__item_extra">
+                              <div class="nft__item_buttons">
+                                <button
+                                  onclick="location.href='03_grey-item-details.html'"
+                                >
+                                  Buy Now
+                                </button>
+                                <div class="nft__item_share">
+                                  <h4>Share</h4>
+                                  <a
+                                    href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
+                                    target="_blank"
+                                    ><i class="fa fa-facebook fa-lg"></i
+                                  ></a>
+                                  <a
+                                    href="https://twitter.com/intent/tweet?url=https://madebydesignesia.com/themes"
+                                    target="_blank"
+                                    ><i class="fa fa-twitter fa-lg"></i
+                                  ></a>
+                                  <a
+                                    href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site https://madebydesignesia.com/themes"
+                                    ><i class="fa fa-envelope fa-lg"></i
+                                  ></a>
+                                </div>
+                              </div>
+                            </div>
+                            <a href="03_grey-item-details.html">
+                              <img
+                                src="./assests/images/porto-1.jpg"
+                                class="lazy nft__item_preview"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div class="nft__item_info">
+                            <a href="03_grey-item-details.html">
+                              <h4>Pinky Ocean</h4>
+                            </a>
+                            <div class="nft__item_click">
+                              <span></span>
+                            </div>
+                            <div class="nft__item_price">
+                              0.08 MOMG<span>1/20</span>
+                            </div>
+                            <div class="nft__item_action">
+                              <a href="#">Place a bid</a>
+                            </div>
+                            <div class="nft__item_like">
+                              <i class="fa fa-heart"></i><span>50</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- nft item begin -->
+                      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="nft__item style-2">
+                          <div class="nft__item_wrap">
+                            <div class="nft__item_extra">
+                              <div class="nft__item_buttons">
+                                <button
+                                  onclick="location.href='03_grey-item-details.html'"
+                                >
+                                  Buy Now
+                                </button>
+                                <div class="nft__item_share">
+                                  <h4>Share</h4>
+                                  <a
+                                    href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
+                                    target="_blank"
+                                    ><i class="fa fa-facebook fa-lg"></i
+                                  ></a>
+                                  <a
+                                    href="https://twitter.com/intent/tweet?url=https://madebydesignesia.com/themes"
+                                    target="_blank"
+                                    ><i class="fa fa-twitter fa-lg"></i
+                                  ></a>
+                                  <a
+                                    href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site https://madebydesignesia.com/themes"
+                                    ><i class="fa fa-envelope fa-lg"></i
+                                  ></a>
+                                </div>
+                              </div>
+                            </div>
+                            <a href="03_grey-item-details.html">
+                              <img
+                                src="./assests/images/porto-2.jpg"
+                                class="lazy nft__item_preview"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div class="nft__item_info">
+                            <a href="03_grey-item-details.html">
+                              <h4>The Animals</h4>
+                            </a>
+                            <div class="nft__item_click">
+                              <span></span>
+                            </div>
+                            <div class="nft__item_price">
+                              0.06 MOMG<span>1/22</span>
+                            </div>
+                            <div class="nft__item_action">
+                              <a href="#">Place a bid</a>
+                            </div>
+                            <div class="nft__item_like">
+                              <i class="fa fa-heart"></i><span>80</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- nft item begin -->
+                      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="nft__item style-2">
+                          <div
+                            class="de_countdown"
+                            data-year="2024"
+                            data-month="12"
+                            data-day="14"
+                            data-hour="8"
+                          ></div>
+
+                          <div class="nft__item_wrap">
+                            <div class="nft__item_extra">
+                              <div class="nft__item_buttons">
+                                <button
+                                  onclick="location.href='03_grey-item-details.html'"
+                                >
+                                  Buy Now
+                                </button>
+                                <div class="nft__item_share">
+                                  <h4>Share</h4>
+                                  <a
+                                    href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
+                                    target="_blank"
+                                    ><i class="fa fa-facebook fa-lg"></i
+                                  ></a>
+                                  <a
+                                    href="https://twitter.com/intent/tweet?url=https://madebydesignesia.com/themes"
+                                    target="_blank"
+                                    ><i class="fa fa-twitter fa-lg"></i
+                                  ></a>
+                                  <a
+                                    href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site https://madebydesignesia.com/themes"
+                                    ><i class="fa fa-envelope fa-lg"></i
+                                  ></a>
+                                </div>
+                              </div>
+                            </div>
+                            <a href="03_grey-item-details.html">
+                              <img
+                                src="./assests/images/porto-3.jpg"
+                                class="lazy nft__item_preview"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div class="nft__item_info">
+                            <a href="03_grey-item-details.html">
+                              <h4>Three Donuts</h4>
+                            </a>
+                            <div class="nft__item_click">
+                              <span></span>
+                            </div>
+                            <div class="nft__item_price">
+                              0.05 MOMG<span>1/11</span>
+                            </div>
+                            <div class="nft__item_action">
+                              <a href="#">Place a bid</a>
+                            </div>
+                            <div class="nft__item_like">
+                              <i class="fa fa-heart"></i><span>97</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- nft item begin -->
+                      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="nft__item style-2">
+                          <div class="nft__item_wrap">
+                            <div class="nft__item_extra">
+                              <div class="nft__item_buttons">
+                                <button
+                                  onclick="location.href='03_grey-item-details.html'"
+                                >
+                                  Buy Now
+                                </button>
+                                <div class="nft__item_share">
+                                  <h4>Share</h4>
+                                  <a
+                                    href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
+                                    target="_blank"
+                                    ><i class="fa fa-facebook fa-lg"></i
+                                  ></a>
+                                  <a
+                                    href="https://twitter.com/intent/tweet?url=https://madebydesignesia.com/themes"
+                                    target="_blank"
+                                    ><i class="fa fa-twitter fa-lg"></i
+                                  ></a>
+                                  <a
+                                    href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site https://madebydesignesia.com/themes"
+                                    ><i class="fa fa-envelope fa-lg"></i
+                                  ></a>
+                                </div>
+                              </div>
+                            </div>
+                            <a href="03_grey-item-details.html">
+                              <img
+                                src="./assests/images/porto-4.jpg"
+                                class="lazy nft__item_preview"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div class="nft__item_info">
+                            <a href="03_grey-item-details.html">
+                              <h4>Graffiti Colors</h4>
+                            </a>
+                            <div class="nft__item_click">
+                              <span></span>
+                            </div>
+                            <div class="nft__item_price">
+                              0.02 MOMG<span>1/15</span>
+                            </div>
+                            <div class="nft__item_action">
+                              <a href="#">Place a bid</a>
+                            </div>
+                            <div class="nft__item_like">
+                              <i class="fa fa-heart"></i><span>73</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="tab-2">
+                    <div class="row">
+                      <!-- nft item begin -->
+                      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="nft__item style-2">
+                          <div
+                            class="de_countdown"
+                            data-year="2024"
+                            data-month="12"
+                            data-day="14"
+                            data-hour="8"
+                          ></div>
+
+                          <div class="nft__item_wrap">
+                            <div class="nft__item_extra">
+                              <div class="nft__item_buttons">
+                                <button
+                                  onclick="location.href='03_grey-item-details.html'"
+                                >
+                                  Buy Now
+                                </button>
+                                <div class="nft__item_share">
+                                  <h4>Share</h4>
+                                  <a
+                                    href="https://www.facebook.com/sharer/sharer.php?u=https://madebydesignesia.com/themes"
+                                    target="_blank"
+                                    ><i class="fa fa-facebook fa-lg"></i
+                                  ></a>
+                                  <a
+                                    href="https://twitter.com/intent/tweet?url=https://madebydesignesia.com/themes"
+                                    target="_blank"
+                                    ><i class="fa fa-twitter fa-lg"></i
+                                  ></a>
+                                  <a
+                                    href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site https://madebydesignesia.com/themes"
+                                    ><i class="fa fa-envelope fa-lg"></i
+                                  ></a>
+                                </div>
+                              </div>
+                            </div>
+                            <a href="03_grey-item-details.html">
+                              <img
+                                src="./assests/images/porto-3.jpg"
+                                class="lazy nft__item_preview"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div class="nft__item_info">
+                            <a href="03_grey-item-details.html">
+                              <h4>Three Donuts</h4>
+                            </a>
+                            <div class="nft__item_click">
+                              <span></span>
+                            </div>
+                            <div class="nft__item_price">
+                              0.05 MOMG<span>1/11</span>
+                            </div>
+                            <div class="nft__item_action">
+                              <a href="#">Place a bid</a>
+                            </div>
+                            <div class="nft__item_like">
+                              <i class="fa fa-heart"></i><span>97</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="tab-3">
+                    <div class="row">
+                      <!-- nft item begin -->
+                      <div class="col-lg-3 col-md-6">
+                        <div class="nft__item style-2">
+                          <div class="nft__item_wrap">
+                            <a href="03_grey-item-details.html">
+                              <img
+                                src="./assests/images/porto-3.jpg"
+                                class="lazy nft__item_preview"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div class="nft__item_info">
+                            <a href="03_grey-item-details.html">
+                              <h4>The Truth</h4>
+                            </a>
+                            <div class="nft__item_click">
+                              <span></span>
+                            </div>
+                            <div class="nft__item_price">
+                              0.06 MOMG<span>1/20</span>
+                            </div>
+                            <div class="nft__item_action">
+                              <a href="#">Place a bid</a>
+                            </div>
+                            <div class="nft__item_like">
+                              <i class="fa fa-heart"></i><span>26</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- nft item begin -->
+                      <div class="col-lg-3 col-md-6">
+                        <div class="nft__item style-2">
+                          <div
+                            class="de_countdown"
+                            data-year="2024"
+                            data-month="12"
+                            data-day="6"
+                            data-hour="8"
+                          ></div>
+
+                          <div class="nft__item_wrap">
+                            <a href="03_grey-item-details.html">
+                              <img
+                                src="./assests/images/porto-4.jpg"
+                                class="lazy nft__item_preview"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div class="nft__item_info">
+                            <a href="03_grey-item-details.html">
+                              <h4>Running Puppets</h4>
+                            </a>
+                            <div class="nft__item_click">
+                              <span></span>
+                            </div>
+                            <div class="nft__item_price">
+                              0.03 MOMG<span>1/24</span>
+                            </div>
+                            <div class="nft__item_action">
+                              <a href="#">Place a bid</a>
+                            </div>
+                            <div class="nft__item_like">
+                              <i class="fa fa-heart"></i><span>45</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="row pb-3 pt-5 py-sm-5 border-top">
+          <div class="col-lg-3 col-md-6 mb-3">
+            <a href="./index.html" class="mb-3 footer-logo d-flex">
+              <img
+                src="./assests/images/logo.webp"
+                class="img-fluid"
+                alt="footer-logo"
+                title="footer-logo"
+              />
+            </a>
+            <p class="">
+              Beautifully designed components that you can copy and paste into
+              your apps.
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-3">
+            <div class="footer-items">
+              <h5 class="footer-title">Navigation</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2">
+                  <a href="./index.html" class="nav-link p-0">Home</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="./about-us.html" class="nav-link p-0">About</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="./blog.html" class="nav-link p-0">Blogs</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="./live-concert.html" class="nav-link p-0"
+                    >Live Concerts</a
+                  >
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="./contact-us.html" class="nav-link p-0"
+                    >Contact Us</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-3">
+            <div class="footer-items">
+              <h5 class="footer-title">Resources</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2">
+                  <a href="./kyc.html" class="nav-link p-0">KYC</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="./features.html" class="nav-link p-0">Features</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="./login.html" class="nav-link p-0">Login</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="./verify.html" class="nav-link p-0">Verify</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-3">
+            <div class="footer-items">
+              <h5 class="footer-title">Follow Us</h5>
+              <ul class="nav social-icon">
+                <li class="nav-item mb-2">
+                  <a
+                    href="#"
+                    class="nav-link p-0"
+                    onclick="event.preventDefault();"
+                    ><i class="fa-brands fa-twitter"></i
+                  ></a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a
+                    href="#"
+                    class="nav-link p-0"
+                    onclick="event.preventDefault();"
+                    ><i class="fa-brands fa-gitlab"></i
+                  ></a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a
+                    href="#"
+                    class="nav-link p-0"
+                    onclick="event.preventDefault();"
+                    ><i class="fa-brands fa-linkedin-in"></i
+                  ></a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a
+                    href="#"
+                    class="nav-link p-0"
+                    onclick="event.preventDefault();"
+                    ><i class="fa-brands fa-instagram"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assests/js/plugins.js"></script>
+    <script src="./assests/js/odometer.js"></script>
+    <script src="./assests/js/jquery-appear.js"></script>
+    <script src="./assests/js/main.js"></script>
+  </body>
+</html>

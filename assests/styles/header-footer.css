@@ -48,7 +48,7 @@ input.form-control:focus {
   color: #a19795;
 }
 .form-control::placeholder {
-  color: #a19795;
+  color: rgba(255, 255, 255, 0.5);
 }
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link.show {

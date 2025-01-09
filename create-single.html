@@ -154,9 +154,9 @@
       <section id="subheader" class="">
         <div class="center-y relative text-center">
           <div class="container">
-            <div class="row align-items-center">
+            <div class="row">
               <div class="col-md-12 text-center">
-                <h1>Features</h1>
+                <h1>Create Music NFT</h1>
               </div>
               <div class="clearfix"></div>
             </div>
@@ -164,115 +164,256 @@
         </div>
       </section>
 
-      <section class="feature-section">
+      <!-- section begin -->
+      <section aria-label="section">
         <div class="container">
-          <h3 class="title line">Artificial Intelligence Engine</h3>
-          <p>
-            Artificial Intelligence system will train the database based on
-            following on social media, Facebook, Twitter, Instagram, etc. of the
-            artists or key stakeholders, lending their name
-          </p>
-          <div class="row align-items-center my-4">
-            <div class="col-lg-12">
-              <div class="img-sec">
-                <img
-                  src="./assests/images/aiprice.png"
-                  class="img-fluid"
-                  alt=""
-                />
+          <div class="row wow fadeIn">
+            <div class="col-lg-7 offset-lg-1">
+              <form
+                id="form-create-item"
+                class="form-border"
+                method="post"
+                action="https://madebydesignesia.com/themes/gigaland/email.php"
+              >
+                <div class="field-set">
+                  <h5>Upload file</h5>
+
+                  <div class="d-create-file">
+                    <p id="file_name" class="mb-4">
+                      PNG, JPG, GIF, WEBP or MP4. Max 200mb.
+                    </p>
+                    <input
+                      type="button"
+                      id="get_file"
+                      class="btn-main"
+                      value="Browse"
+                    />
+                    <input type="file" id="upload_file" />
+                  </div>
+
+                  <div class="spacer-40"></div>
+
+                  <h5>Select method</h5>
+                  <div class="de_tab tab_methods">
+                    <ul class="de_nav">
+                      <li class="active">
+                        <span><i class="fa fa-tag"></i>Fixed price</span>
+                      </li>
+                      <li>
+                        <span
+                          ><i class="fa fa-hourglass-1"></i>Timed auction</span
+                        >
+                      </li>
+                      <li>
+                        <span><i class="fa fa-users"></i>Open for bids</span>
+                      </li>
+                    </ul>
+
+                    <div class="de_tab_content">
+                      <div id="tab_opt_1">
+                        <h5>Price</h5>
+                        <input
+                          type="text"
+                          name="item_price"
+                          id="item_price"
+                          class="form-control"
+                          placeholder="enter price for one item (MOMG)"
+                        />
+                      </div>
+
+                      <div id="tab_opt_2">
+                        <h5>Minimum bid</h5>
+                        <input
+                          type="text"
+                          name="item_price_bid"
+                          id="item_price_bid"
+                          class="form-control"
+                          placeholder="enter minimum bid"
+                        />
+
+                        <div class="spacer-20"></div>
+
+                        <div class="row">
+                          <div class="col-md-6">
+                            <h5>Starting date</h5>
+                            <input
+                              type="date"
+                              name="bid_starting_date"
+                              id="bid_starting_date"
+                              class="form-control"
+                              min="1997-01-01"
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <h5>Expiration date</h5>
+                            <input
+                              type="date"
+                              name="bid_expiration_date"
+                              id="bid_expiration_date"
+                              class="form-control"
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div id="tab_opt_3"></div>
+                    </div>
+                  </div>
+
+                  <div class="spacer-20"></div>
+
+                  <div class="switch-with-title">
+                    <h5>
+                      <i
+                        class="fa fa- fa-unlock-alt id-color-2 icon_padlock"
+                      ></i
+                      >Unlock once purchased
+                    </h5>
+                    <div class="de-switch">
+                      <input
+                        type="checkbox"
+                        id="switch-unlock"
+                        class="checkbox"
+                      />
+                      <label for="switch-unlock"></label>
+                    </div>
+                    <div class="clearfix"></div>
+                    <p class="p-info">
+                      Unlock content after successful transaction.
+                    </p>
+
+                    <div class="hide-content">
+                      <input
+                        type="text"
+                        name="item_unlock"
+                        id="item_unlock"
+                        class="form-control"
+                        placeholder="Access key, code to redeem or link to a file..."
+                      />
+                    </div>
+                  </div>
+
+                  <div class="spacer-20"></div>
+
+                  <h5>Choose collection</h5>
+                  <p class="p-info">
+                    This is the collection where your item will appear.
+                  </p>
+
+                  <div id="item_collection" class="dropdown fullwidth mb20">
+                    <a href="#" class="btn-selector">Select Collection</a>
+                    <ul>
+                      <li><span>Abstraction</span></li>
+                      <li><span>Patternlicious</span></li>
+                      <li><span>Skecthify</span></li>
+                      <li><span>Cartoonism</span></li>
+                      <li><span>Virtuland</span></li>
+                      <li><span>Papercut</span></li>
+                    </ul>
+                  </div>
+
+                  <div class="spacer-20"></div>
+
+                  <h5>Title</h5>
+                  <input
+                    type="text"
+                    name="item_title"
+                    id="item_title"
+                    class="form-control"
+                    placeholder="e.g. 'Crypto Funk"
+                  />
+
+                  <div class="spacer-20"></div>
+
+                  <h5>Description</h5>
+                  <textarea
+                    data-autoresize
+                    name="item_desc"
+                    id="item_desc"
+                    class="form-control"
+                    placeholder="e.g. 'This is very limited item'"
+                  ></textarea>
+
+                  <div class="spacer-20"></div>
+                  <h5>Track URL</h5>
+                  <input
+                    type="text"
+                    name="item_royalties"
+                    id="item_royalties"
+                    class="form-control"
+                    placeholder="e.g. https://www.youtube.com/watch?v=5rfuNBI7iN0"
+                  />
+                  <div class="spacer-20"></div>
+
+                  <h5>Royalties</h5>
+                  <input
+                    type="text"
+                    name="item_royalties"
+                    id="item_royalties"
+                    class="form-control"
+                    placeholder="suggested: 0, 10%, 20%, 30%. Maximum is 70%"
+                  />
+
+                  <div class="spacer-single"></div>
+
+                  <input
+                    type="button"
+                    id="submit"
+                    class="btn-main"
+                    value="Create Item"
+                  />
+                  <div class="spacer-single"></div>
+                </div>
+              </form>
+            </div>
+
+            <div class="col-lg-3 col-sm-6 col-xs-12">
+              <h5>Preview item</h5>
+              <div class="nft__item style-2">
+                <div
+                  class="de_countdown"
+                  data-year="2024"
+                  data-month="12"
+                  data-day="16"
+                  data-hour="8"
+                ></div>
+                <div class="author_list_pp">
+                  <a href="./author-public-profile.html">
+                    <img
+                      class="lazy"
+                      src="./assests/images/author/author-1.jpg"
+                      alt=""
+                    />
+                    <i class="fa fa-check"></i>
+                  </a>
+                </div>
+                <div class="nft__item_wrap">
+                  <a href="#">
+                    <img
+                      src="./assests/images/collections/coll-thumbnail-3.jpg"
+                      id="get_file_2"
+                      class="lazy nft__item_preview"
+                      alt=""
+                    />
+                  </a>
+                </div>
+                <div class="nft__item_info">
+                  <a href="#">
+                    <h4>Pinky Ocean</h4>
+                  </a>
+                  <div class="nft__item_click">
+                    <span></span>
+                  </div>
+                  <div class="nft__item_price">0.08 MOMG<span>1/20</span></div>
+                  <div class="nft__item_action">
+                    <a href="#">Buy Now</a>
+                  </div>
+                  <div class="nft__item_like">
+                    <i class="fa fa-heart"></i><span>50</span>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col-lg-12 mt-3">
-              <ul class="MuiList-root">
-                <li class="MuiListItem-root MuiListItem-gutters">
-                  The system will also train by questionnaire filled by expert
-                  at regular time interval of 1st ,3rd, 7th and 15th day The
-                  data will be capturing repeatability, remembrance and feel
-                  good of the music video.
-                </li>
-                <li class="MuiListItem-root MuiListItem-gutters">
-                  The AI integrated machine learning with 100 songs will start
-                  predicting the virality and range of viewership of the songs.
-                  It will be a paid service and revenue stream for our
-                  portfolio. Number of financial Instruments can be created on
-                  the bases of the assets being available on market place
-                </li>
-              </ul>
-            </div>
-          </div>
-          <h3 class="title line">AI/ML Modelling</h3>
-          <div class="row align-items-center my-4">
-            <div class="col-lg-6 text-center">
-              <div class="">
-                <img
-                  src="./assests/images/information.png"
-                  class="img-fluid w-100"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="col-lg-6 text-center">
-              <div class="">
-                <img
-                  src="./assests/images/technical.png"
-                  class="img-fluid w-100"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="col-lg-12">
-              <p class="text-center mt-4">
-                AI Modelling with Technical and Fundamental Information
-              </p>
-            </div>
-          </div>
-          <div class="d-flex justify-content-between align-items-center">
-            <h3 class="title line mb-0">About Nodes</h3>
-            <div class="d-flex align-items-center">
-              <p class="me-2 text-white">Powered by</p>
-              <img
-                src="./assests/images/logo2.png"
-                class="img-fluid"
-                style="width: 100%; max-width: 220px"
-              />
-            </div>
-          </div>
-          <h5 class="MuiTypography-h5">
-            MOMG-An AI powered Music Videos Ecosystem
-          </h5>
-          <h6 class="MuiTypography-h6">
-            MOMG Nodes creates seamless mechanism for ownership, distribution
-            and create seamless ecosystem for worldwide music videos Industry in
-            various languages and geographies
-          </h6>
-          <div class="MuiBox-root jss320">
-            <h5 class="MuiTypography-h5">
-              MOMG- Nodes powered decentralized framework
-            </h5>
-            <h6 class="MuiTypography-h6">
-              MOMG Nodes&nbsp;framework enhance security, maintain integrity,
-              and provide credibility to the network. The node has unique
-              features and helps to verify the network transactions. In short,
-              MOMG nodes help provide trust and integrity to the blockchain and
-              allow people to harness its true potential.
-            </h6>
-            <h5 class="MuiTypography-h5">MOMG-MV</h5>
-            <h6 class="MuiTypography-h6">
-              MOMG-MV are soft nodes having fully functional information about
-              portfolio of tokens, NFT’s, Music Videos ownership,Artist and
-              performers information, Social media and channel distribution
-              information.Smart contracts will define the revenue sharing
-              methods in most transparent ways
-            </h6>
-            <h5 class="MuiTypography-h5">Rewards</h5>
-            <h6 class="MuiTypography-h6">
-              MOMG Music Videos Ecosystem helps Nodes owner to earn rewards in
-              various methods. The owner has potential to earn through hosting,
-              streaming NFT creations and digital distribution
-            </h6>
-          </div>
-          <div class="text-end mt-3">
-            <button class="btn-main">Buy Now</button>
           </div>
         </div>
       </section>
