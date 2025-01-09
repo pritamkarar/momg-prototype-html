@@ -216,6 +216,8 @@ footer {
 }
 #mainmenu .img-box {
   position: relative;
+  border-radius: 50%;
+  cursor: pointer;
 }
 #mainmenu .img-box img {
   position: relative;
@@ -255,6 +257,109 @@ footer {
 }
 .nav-item:hover .nav-link::before {
   width: 100%;
+}
+.de-menu-notification {
+  cursor: pointer;
+  display: inline-flex;
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  line-height: 32px;
+  border-radius: 30px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  align-items: center;
+  justify-content: center;
+}
+#de-click-menu-notification {
+  position: relative;
+}
+#de-click-menu-notification .d-count {
+  display: inline-block;
+  position: absolute;
+  z-index: 100;
+  background: #333;
+  line-height: 1em;
+  padding: 6px;
+  width: 22px;
+  border-radius: 30px;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  top: -7px;
+  right: -7px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 10px;
+  background: #ffb329;
+}
+.de-submenu {
+  text-align: left;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 75px;
+  background: #ffffff;
+  padding: 15px 20px;
+  margin: 0;
+  margin-top: 10px;
+  width: 250px;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  z-index: 1000;
+}
+.de-submenu.open {
+  opacity: 1;
+}
+.de-submenu {
+  border: solid 1px rgba(255, 255, 255, 0.1);
+  background: #212428;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+}
+.de-submenu h4 {
+  font-weight: bold;
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  margin-top: 5px;
+  color: #fff;
+}
+#de-submenu-notification ul {
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+  list-style: none;
+}
+#de-submenu-notification li {
+  line-height: 20px;
+  margin-bottom: 15px;
+}
+#de-submenu-notification li a {
+  color: #ffffff;
+}
+#de-submenu-notification li img {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  border-radius: 30px;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+}
+#de-submenu-notification li .d-desc {
+  margin-left: 45px;
+}
+#de-submenu-notification li .d-time {
+  color: #999999;
+}
+.img-box:hover,
+.de-menu-notification:hover {
+  -webkit-box-shadow: 0px 0px 0px 4px rgba(255, 179, 41, 0.5);
+  -moz-box-shadow: 0px 0px 0px 4px rgba(255, 179, 41, 0.5);
+  box-shadow: 0px 0px 0px 4px rgba(255, 179, 41, 0.5);
 }
 @media (min-width: 992px) {
   footer .row .col-lg-3:nth-child(2),

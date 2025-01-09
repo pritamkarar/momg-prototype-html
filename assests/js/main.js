@@ -408,7 +408,18 @@ new WOW().init();
       $(this).countdown({ until: new Date(y, m - 1, d, h) });
     });
   }
-
+  jQuery("#menu-btn").on("click", function () {
+    $("#de-submenu-profile").removeClass("open");
+    $("#de-submenu-profile").hide();
+    $("#de-click-menu-profile").data("iteration", 1);
+    $("#de-submenu-notification").removeClass("open");
+    $("#de-submenu-notification").hide();
+    $("#de-click-menu-notification").data("iteration", 1);
+  });
+  $("#de-submenu-notification").hide();
+  $("#get_file,#get_file_2").click(function () {
+    $("#upload_file").click();
+  });
   jQuery(document).ready(function () {
     "use strict";
     jQuery(window).on("scroll", function () {

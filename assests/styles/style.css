@@ -2316,3 +2316,29 @@ p.p-info {
 ::-webkit-calendar-picker-indicator {
   filter: invert(1);
 }
+.billing-radio input[type="radio"] {
+  appearance: none;
+  width: 21px;
+  height: 21px;
+  border-radius: 100px;
+  border: 1px solid #ccc;
+  position: relative;
+  cursor: pointer;
+}
+
+.billing-radio input[type="radio"]:checked {
+  border: 1px solid #ffb329;
+}
+.billing-radio input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  background: #ffb329;
+  border-radius: 100px;
+  top: 4px;
+  left: 4px;
+}
+.billing-radio label:not(:last-of-type) {
+  margin-right: 15px !important;
+}
