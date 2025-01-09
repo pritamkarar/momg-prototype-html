@@ -175,6 +175,7 @@
                 </ul>
                 <div class="de_tab_content">
                   <div class="tab-1">
+                    <div class="d-flex flex-wrap">
                     <div class="p_list">
                       <div class="p_list_pp">
                         <a href="#"  onclick="event.preventDefault();">
@@ -259,9 +260,11 @@
                         1 edition <b>not for sale</b>
                       </div>
                     </div>
+                  </div>
                   </div>
 
                   <div class="tab-2">
+                    <div class="d-flex flex-wrap">
                     <div class="p_list">
                       <div class="p_list_pp">
                         <a href="#"  onclick="event.preventDefault();">
@@ -313,8 +316,10 @@
                       </div>
                     </div>
                   </div>
+                  </div>
 
                   <div class="tab-3">
+                    <div class="d-flex flex-wrap">
                     <div class="p_list">
                       <div class="p_list_pp">
                         <a href="#"  onclick="event.preventDefault();">
@@ -382,37 +387,15 @@
                         1 edition <b>not for sale</b>
                       </div>
                     </div>
+                  </div>
                   </div>
                 </div>
                 <div class="spacer-10"></div>
 
-                <h6>Price</h6>
-                <div class="nft-item-price">
-                  <img src="./assests/images/ethereum.svg" alt="" /><span
-                    >0.059</span
-                  >($253.67)
-                </div>
+              
 
                 <!-- Button trigger modal -->
-                 <div class="d-flex justify-content-center">
-                <a
-                  href="#"
-                  class="btn-main btn-lg"
-                  data-bs-toggle="modal"
-                  data-bs-target="#buy_now"
-                >
-                  Buy Now
-                </a>
-                &nbsp;
-                <a
-                  href="#"
-                  class="btn-main btn-lg btn-light"
-                  data-bs-toggle="modal"
-                  data-bs-target="#place_a_bid"
-                >
-                  Place a Bid
-                </a>
-              </div>
+               
               </div>
             </div>
             <div class="col-lg-6">
@@ -526,6 +509,31 @@
               </div>
               <div class="view-more">
                 <a href="#tableSec">View more details</a>
+              </div>
+              <h6 class="mt-4">Price</h6>
+              <div class="nft-item-price">
+                <img src="./assests/images/ethereum.svg" alt="" /><span
+                  >0.059</span
+                >($253.67)
+              </div>
+              <div class="d-flex justify-content-start">
+                <a
+                  href="#"
+                  class="btn-main btn-lg m-0 me-3"
+                  data-bs-toggle="modal"
+                  data-bs-target="#buy_now"
+                >
+                  Buy Now
+                </a>
+                &nbsp;
+                <a
+                  href="#"
+                  class="btn-main btn-lg btn-light m-0"
+                  data-bs-toggle="modal"
+                  data-bs-target="#place_a_bid"
+                >
+                  Place a Bid
+                </a>
               </div>
             </div>
           </div>
@@ -1169,22 +1177,34 @@
               <h5 class="footer-title">Follow Us</h5>
               <ul class="nav social-icon">
                 <li class="nav-item mb-2">
-                  <a href="#" class="nav-link p-0"
+                  <a
+                    href="#"
+                    class="nav-link p-0"
+                    onclick="event.preventDefault();"
                     ><i class="fa-brands fa-twitter"></i
                   ></a>
                 </li>
                 <li class="nav-item mb-2">
-                  <a href="#" class="nav-link p-0"
+                  <a
+                    href="#"
+                    class="nav-link p-0"
+                    onclick="event.preventDefault();"
                     ><i class="fa-brands fa-gitlab"></i
                   ></a>
                 </li>
                 <li class="nav-item mb-2">
-                  <a href="#" class="nav-link p-0"
+                  <a
+                    href="#"
+                    class="nav-link p-0"
+                    onclick="event.preventDefault();"
                     ><i class="fa-brands fa-linkedin-in"></i
                   ></a>
                 </li>
                 <li class="nav-item mb-2">
-                  <a href="#" class="nav-link p-0"
+                  <a
+                    href="#"
+                    class="nav-link p-0"
+                    onclick="event.preventDefault();"
                     ><i class="fa-brands fa-instagram"></i
                   ></a>
                 </li>
@@ -1243,7 +1263,7 @@
               <a
                 href="#" onclick="event.preventDefault();"
                 target="_blank"
-                class="btn-main"
+                class="btn-main w-100"
                 >Add funds</a
               >
             </div>
@@ -1313,7 +1333,7 @@
               <a
                 href="#" onclick="event.preventDefault();"
                 target="_blank"
-                class="btn-main"
+                class="btn-main w-100"
                 >Place a bid</a
               >
             </div>

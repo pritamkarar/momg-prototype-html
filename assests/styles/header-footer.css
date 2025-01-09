@@ -231,7 +231,7 @@ footer {
   color: rgba(255, 255, 255, 0.5);
   /* padding-left: 5px; */
   font-size: 11px;
-  right: -16px;
+  right: -22px;
   top: 50%;
   transition: all ease-in-out 0.3s;
   transform: translateY(-50%);
