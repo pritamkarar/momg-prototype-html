@@ -38,6 +38,29 @@ new WOW().init();
     });
   }
   function load_owl() {
+    jQuery("#collection-carousel-alt").owlCarousel({
+      center: false,
+      items: 5,
+      loop: true,
+      margin: 25,
+      nav: true,
+      navText: [
+        "<i class='fa fa-chevron-left'></i>",
+        "<i class='fa fa-chevron-right'></i>",
+      ],
+      dots: false,
+      responsive: {
+        1000: {
+          items: 5,
+        },
+        600: {
+          items: 2,
+        },
+        0: {
+          items: 1,
+        },
+      },
+    });
     jQuery("#banner-carousel").owlCarousel({
       center: false,
       items: 1,
@@ -408,6 +431,7 @@ new WOW().init();
       $(this).countdown({ until: new Date(y, m - 1, d, h) });
     });
   }
+
   jQuery("#menu-btn").on("click", function () {
     $("#de-submenu-profile").removeClass("open");
     $("#de-submenu-profile").hide();
