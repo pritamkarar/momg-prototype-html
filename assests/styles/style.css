@@ -2435,3 +2435,21 @@ h4 {
   visibility: hidden;
   z-index: 1;
 }
+
+/*Payment Transfer*/
+.transfer-card {
+  margin-top: 10px;
+}
+.tf-card-block {
+  padding: 10px 16px;
+  border-radius: 8px;
+  box-shadow: 0px 8px 15px 0px rgba(24, 25, 27, 0.05);
+  background: #ffffff08;
+}
+.tf-card-block .inner {
+  gap: 16px;
+}
+.tf-card-block .logo-img {
+  width: 30px;
+  height: 30px;
+}

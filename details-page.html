@@ -1354,33 +1354,70 @@
                 <div>You will pay</div>
                 <div><b>0.013325 MOMG</b></div>
               </div>
-              <div class="billing-radio d-flex my-4">
-                <div class="me-3">
-                  <input hidden type="radio" class="me-2" id="wallet" name="payment-type" value="Yes" checked="">
-                  <label class="my-0" for="wallet">
-                    <img src="./assests/images/wallet-icon.svg" alt="">
-                  <span> Wallet </span></label>
+              <div class="transfer-card">
+                <div class="tf-container">
+                   
+                    <div class="tf-card-block mb-1 d-flex align-items-center justify-content-between">
+                      <label for="wallet">
+                        <div class="inner d-flex align-items-center">
+                            <div class="logo-img">
+                                <img class="img-fluid" src="./assests/images/wallet-icon.svg" alt="image">
+                            </div>
+                            <div class="content">
+                                <h4 class="mb-0 fw-normal"><a  class="fw_6">Wallet</a></h4>
+                            </div>
+                        </div>
+                      </label>
+                        
+                      <input  type="radio" class="me-2" id="wallet" name="payment-type" value="wallet" >
+                    </div>
+                  
+                    <div class="tf-card-block mb-1 d-flex align-items-center justify-content-between">
+                      <label for="UPI">
+                        <div class="inner d-flex align-items-center">
+                            <div class="logo-img upi-icon">
+                                <img class="img-fluid" src="./assests/images/UPI-Logo-vector.svg" alt="image">
+                            </div>
+                            <div class="content">
+                                <h4 class="mb-0 fw-normal"><a class="fw_6">UPI</a></h4>
+                            </div>
+                        </div>
+                      </label>
+                        
+                        <input  type="radio" class="me-2" id="UPI" name="payment-type" value="upi" >
+                      </div>
+                    </div>
+                    <div class="tf-card-block mb-1 d-flex align-items-center justify-content-between">
+                      <label for="card">
+                        <div class="inner d-flex align-items-center">
+                            <div class="logo-img card-icon">
+                                <img class="img-fluid" src="./assests/images/credit-card.svg" alt="image">
+                            </div>
+                            <div class="content">
+                                <h4 class="mb-0 fw-normal"><a  class="fw_6">Cards</a></h4>
+                            </div>
+                        </div>
+                      </label>
+                        
+                        <input  type="radio" class="me-2" id="card" name="payment-type" value="card" >
+                      </div>
                 </div>
-                <div class="me-3">
-                <input hidden type="radio" class="me-2" id="upi" name="payment-type" value="No">
-                <label class="mb-0 me-2 mt-0" for="upi">
-                  <img src="./assests/images/upi-icon.svg" alt="">
-                  <span> UPI</span></label>
-                </div>
-                <div>
-                <input hidden type="radio" class="me-2" id="card" name="payment-type" value="No">
-                <label class="mb-0 me-2 mt-0" for="card">
-                  <img src="./assests/images/credit-card-icon.svg" alt="">
-                  <span> Debit/Credit Card</span></label>
-                </div>
-            </div>
-            
-              <a
+                <!-- <div class="bottom-navigation-bar">
+                    <div class="tf-container">
+                        <a href="#" id="btn-popup-down" class="tf-btn accent large">Confirm Transaction</a>
+                    </div>
+                </div> -->
+                <a
                 href="#" onclick="event.preventDefault();"
                 target="_blank"
-                class="btn-main w-100"
+                class="btn-main mt-3 w-100"
                 >Pay Now</a
               >
+            </div>
+           
+            </div>
+            
+             
             </div>
           </div>
         </div>
