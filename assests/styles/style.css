@@ -2321,31 +2321,26 @@ p.p-info {
 ::-webkit-calendar-picker-indicator {
   filter: invert(1);
 }
-.billing-radio input[type="radio"] {
-  appearance: none;
-  width: 21px;
-  height: 21px;
-  border-radius: 100px;
-  border: 1px solid #ccc;
-  position: relative;
-  cursor: pointer;
-}
 
-.billing-radio input[type="radio"]:checked {
-  border: 1px solid #ffb329;
-}
-.billing-radio input[type="radio"]:checked::after {
-  content: "";
-  position: absolute;
-  width: 11px;
-  height: 11px;
-  background: #ffb329;
-  border-radius: 100px;
-  top: 4px;
-  left: 4px;
+.billing-radio input[type="radio"]:checked + label {
+  color: #ffb329;
 }
 .billing-radio label:not(:last-of-type) {
   margin-right: 15px !important;
+}
+.billing-radio label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.billing-radio label img {
+  width: 25px;
+  margin-right: 10px;
+}
+.billing-radio label span {
+  display: flex;
+  align-items: center;
+  margin-top: 3px;
 }
 .de-table.table-rank {
   color: #ffffff;

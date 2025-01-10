@@ -1341,17 +1341,7 @@
                 class="form-control"
                 value="1"
               />
-              <div class="billing-radio d-flex">
-                <input type="radio" class="me-2" id="wallet" name="payment-type" value="Yes" checked="">
-                <label class="my-0" for="yes">Wallet </label>
-
-                <input type="radio" class="me-2" id="upi" name="payment-type" value="No">
-                <label class="mb-0 me-2 mt-0" for="upi">UPI</label>
-
-                <input type="radio" class="me-2" id="card" name="payment-type" value="No">
-                <label class="mb-0 me-2 mt-0" for="card">Debit/Credit Card</label>
-            </div>
-              <div class="spacer-single"></div>
+           
               <div class="de-flex">
                 <div>Your balance</div>
                 <div><b>10.67856 MOMG</b></div>
@@ -1364,7 +1354,27 @@
                 <div>You will pay</div>
                 <div><b>0.013325 MOMG</b></div>
               </div>
-              <div class="spacer-single"></div>
+              <div class="billing-radio d-flex my-4">
+                <div class="me-3">
+                  <input hidden type="radio" class="me-2" id="wallet" name="payment-type" value="Yes" checked="">
+                  <label class="my-0" for="wallet">
+                    <img src="./assests/images/wallet-icon.svg" alt="">
+                  <span> Wallet </span></label>
+                </div>
+                <div class="me-3">
+                <input hidden type="radio" class="me-2" id="upi" name="payment-type" value="No">
+                <label class="mb-0 me-2 mt-0" for="upi">
+                  <img src="./assests/images/upi-icon.svg" alt="">
+                  <span> UPI</span></label>
+                </div>
+                <div>
+                <input hidden type="radio" class="me-2" id="card" name="payment-type" value="No">
+                <label class="mb-0 me-2 mt-0" for="card">
+                  <img src="./assests/images/credit-card-icon.svg" alt="">
+                  <span> Debit/Credit Card</span></label>
+                </div>
+            </div>
+            
               <a
                 href="#" onclick="event.preventDefault();"
                 target="_blank"

@@ -30,74 +30,6 @@
   </head>
 
   <body>
-    <header>
-      <div class="container">
-        <nav class="navbar navbar-expand-xl">
-          <a class="navbar-brand" href="./index.html">
-            <img
-              src="./assests/images/logo.webp"
-              alt="logo"
-              title="logo"
-              class="img-fluid"
-            />
-          </a>
-          <form class="d-flex position-relative me-auto" role="search">
-            <input
-              class="form-control search"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </form>
-          <div class="back-drop d-xl-none"></div>
-          <button class="navbar-toggler" type="button">
-            <span class="navbar-toggler-icon"
-              ><i class="fa-solid fa-bars-staggered"></i
-            ></span>
-          </button>
-          <div class="navbar-collapse" id="navbarSupportedContent">
-            <div class="d-flex justify-content-between">
-              <a class="navbar-brand d-xl-none" href="./index.html">
-                <img
-                  src="./assests/images/logo.webp"
-                  alt="logo"
-                  title="logo"
-                  class="img-fluid"
-                />
-              </a>
-              <button
-                type="button"
-                class="close-icon align-self-baseline d-xl-none"
-              >
-                <i class="fa-solid fa-xmark"></i>
-              </button>
-            </div>
-
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="./index.html"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./music-nft.html">Marketplace</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./about-us.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./features.html">Features</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./live-concert.html">Live Concerts</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </header>
-
     <main>
       <section
         class="full-height position-relative vertical-center"
@@ -119,20 +51,33 @@
                     aliqua ut enim.
                   </p>
                 </div>
-
                 <div
                   class="col-lg-4 offset-lg-2 wow fadeIn"
                   data-wow-delay=".5s"
                 >
                   <div
-                    class="box-rounded padding40 box-url"
+                    class="box-rounded padding40 login-box"
                     data-bgcolor="#21273e"
                   >
-                    <h3 class="mb10">Sign In</h3>
-                    <p>
-                      Login using an existing account or create a new account
-                      <a href="register.html">here<span></span></a>.
-                    </p>
+                    <div class="logo text-center mb-4">
+                      <img
+                        src="./assests/images/logo.webp"
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div class="login-with-acc">
+                      <button type="button" class="">
+                        <img src="./assests/images/facebook.svg" alt="img" />
+                        <span>Sign In with Facebook</span>
+                      </button>
+
+                      <button type="button" class="">
+                        <img src="./assests/images/google (1).svg" alt="img" />
+                        <span>Sign In with Google</span>
+                      </button>
+                    </div>
+                    <div class="saprator my-3"><span>OR</span></div>
                     <form
                       name="contactForm"
                       id="contact_form"
@@ -140,6 +85,12 @@
                       method="post"
                       action="https://madebydesignesia.com/themes/gigaland/blank.php"
                     >
+                      <h4
+                        class="text-center f-w-500 mb-3"
+                        style="font-size: 20px"
+                      >
+                        Login with your email
+                      </h4>
                       <div class="field-set">
                         <input
                           type="text"
@@ -171,31 +122,12 @@
                       </div>
 
                       <div class="clearfix"></div>
-
-                      <div class="spacer-single"></div>
-
-                      <!-- social icons -->
-                      <ul class="list s3">
-                        <li>Login with:</li>
-                        <li class="me-0">
-                          <a href="#">
-                            <img
-                              src="./assests/images/icons8-facebook.svg"
-                              alt=""
-                              class="img-fluid face-book"
-                            />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <img
-                              src="./assests/images/google.svg"
-                              alt=""
-                              class="img-fluid"
-                            />
-                          </a>
-                        </li>
-                      </ul>
+                      <div
+                        class="d-flex justify-content-between align-items-end mt-4"
+                      >
+                        <h6 class="f-w-500 mb-0">Don't have an Account?</h6>
+                        <a href="./register.html">Create Account</a>
+                      </div>
                       <!-- social icons close -->
                     </form>
                   </div>
@@ -206,115 +138,6 @@
         </div>
       </section>
     </main>
-
-    <footer>
-      <div class="container">
-        <div class="row pb-3 pt-5 py-sm-5 border-top">
-          <div class="col-lg-3 col-md-6 mb-3">
-            <a href="./index.html" class="mb-3 footer-logo d-flex">
-              <img
-                src="./assests/images/logo.webp"
-                class="img-fluid"
-                alt="footer-logo"
-                title="footer-logo"
-              />
-            </a>
-            <p class="">
-              MOMG World first Integrated platform which serves two critical
-              consumption of human being i.e. Healthcare and Entertainment . The
-              system is web3.0, Metaverse and Artificial Intelligence powered
-            </p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mb-3">
-            <div class="footer-items">
-              <h5 class="footer-title">Navigation</h5>
-              <ul class="nav flex-column">
-                <li class="nav-item mb-2">
-                  <a href="./index.html" class="nav-link p-0">Home</a>
-                </li>
-                <li class="nav-item mb-2">
-                  <a href="./about-us.html" class="nav-link p-0">About</a>
-                </li>
-                <li class="nav-item mb-2">
-                  <a href="./blog.html" class="nav-link p-0">Blogs</a>
-                </li>
-                <li class="nav-item mb-2">
-                  <a href="./live-concert.html" class="nav-link p-0"
-                    >Live Concerts</a
-                  >
-                </li>
-                <li class="nav-item mb-2">
-                  <a href="./contact-us.html" class="nav-link p-0"
-                    >Contact Us</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mb-3">
-            <div class="footer-items">
-              <h5 class="footer-title">Resources</h5>
-              <ul class="nav flex-column">
-                <li class="nav-item mb-2">
-                  <a href="./kyc.html" class="nav-link p-0">KYC</a>
-                </li>
-                <li class="nav-item mb-2">
-                  <a href="./features.html" class="nav-link p-0">Features</a>
-                </li>
-                <li class="nav-item mb-2">
-                  <a href="./login.html" class="nav-link p-0">Login</a>
-                </li>
-                <li class="nav-item mb-2">
-                  <a href="./verify.html" class="nav-link p-0">Verify</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mb-3">
-            <div class="footer-items">
-              <h5 class="footer-title">Follow Us</h5>
-              <ul class="nav social-icon">
-                <li class="nav-item mb-2">
-                  <a
-                    href="#"
-                    class="nav-link p-0"
-                    onclick="event.preventDefault();"
-                    ><i class="fa-brands fa-twitter"></i
-                  ></a>
-                </li>
-                <li class="nav-item mb-2">
-                  <a
-                    href="#"
-                    class="nav-link p-0"
-                    onclick="event.preventDefault();"
-                    ><i class="fa-brands fa-gitlab"></i
-                  ></a>
-                </li>
-                <li class="nav-item mb-2">
-                  <a
-                    href="#"
-                    class="nav-link p-0"
-                    onclick="event.preventDefault();"
-                    ><i class="fa-brands fa-linkedin-in"></i
-                  ></a>
-                </li>
-                <li class="nav-item mb-2">
-                  <a
-                    href="#"
-                    class="nav-link p-0"
-                    onclick="event.preventDefault();"
-                    ><i class="fa-brands fa-instagram"></i
-                  ></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
