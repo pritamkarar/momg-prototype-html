@@ -28,9 +28,9 @@ CookieConsent.run({
     translations: {
       en: {
         consentModal: {
-          title: "Hello traveller, it's cookie time!",
+          title: "This website uses cookies",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+            "We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services.",
           acceptAllBtn: "Accept all",
           acceptNecessaryBtn: "Reject all",
           showPreferencesBtn: "Manage preferences",
@@ -48,31 +48,31 @@ CookieConsent.run({
             {
               title: "Cookie Usage",
               description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                "We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services.",
             },
             {
               title:
                 'Strictly Necessary Cookies <span class="pm__badge">Always Enabled</span>',
               description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                "Necessary cookies help make a website usable by enabling basic functions like page navigation and access to secure areas of the website. The website cannot function properly without these cookies.",
               linkedCategory: "necessary",
             },
             {
               title: "Functionality Cookies",
               description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                "Functionality cookies enable a website to remember information that changes the way the website behaves or looks, like your preferred language or the region that you are in.",
               linkedCategory: "functionality",
             },
             {
               title: "Analytics Cookies",
               description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                "Analytics cookies help website owners to understand how visitors interact with websites by collecting and reporting information anonymously.",
               linkedCategory: "analytics",
             },
             {
               title: "More information",
               description:
-                'For any query in relation to my policy on cookies and your choices, please <a class="cc__link" href="#yourdomain.com">contact me</a>.',
+                'For any query in relation to my policy on cookies and your choices, please <a class="cc__link" href="https://demo.momg.live/contact-us">contact me</a>.',
             },
           ],
         },
