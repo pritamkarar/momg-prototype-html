@@ -15,11 +15,11 @@ header {
 }
 .blur {
   width: 100%;
-  background: rgba(33, 36, 40, 0.5);
+  background: rgb(33 36 40 / 29%);
   height: 100%;
   position: absolute;
   z-index: -2;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(4px);
   top: 0;
 }
 .navbar-brand,
